@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="LitNeRF">
+  <meta name="keywords" content="LitNeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="LitNeRF: Intrinsic Radiance Decomposition for High-Quality View Synthesis and Relighting of Faces">	
+  <title>LitNeRF</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Cafca</h1> <br\>
+          <h2 class="title is-3 publication-title"> High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot Captures</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://ait.ethz.ch/people/buehler" target="_blank">Marcel C. Bühler</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://ait.ethz.ch/people/lig" target="_blank">Gengyan Li</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://errollw.com/" target="_blank">Erroll Wood</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=mTTsIr4AAAAJ&hl=en" target="_blank">Leonhard Helminger</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://xuchen-ethz.github.io/" target="_blank">Xu Chen</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=USYxdJ4AAAAJ&hl=en&oi=ao" target="_blank">Tanmay Shah</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=pe5XLTEAAAAJ&amp;hl=en" target="_blank">Daoye Wang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="http://stephangarbin.com/" target="_blank">Stephan Garbin</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=dznX1DMAAAAJ&amp;hl=es" target="_blank">Sergio Orts-Escolano</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://ait.ethz.ch/people/hilliges" target="_blank">Otmar Hilliges</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=sY8lt7AAAAAJ&hl=en" target="_blank">Dmitry Lagun</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=FaLQzRAAAAAJ&hl=en" target="_blank">Jérémy Riviere</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://www.paulogotardo.com/" target="_blank">Paulo Gotardo</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://thabobeeler.com/" target="_blank">Thabo Beeler</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://www.meka.page/" target="_blank">Abhimitra Meka</a><sup>1</sup></span>
+            <span class="author-block"><a href="https://krips89.github.io/profile_page/" target="_blank">Kripasindhu Sarkar</a><sup>1</sup>,</span>	
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Google</span>
+              <span class="author-block"><sup>2</sup>ETH Zurich</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+            <br/>
+              <span class="author-block">ACM SIGGRAPH ASIA 2024</span>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+ </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+Volumetric modeling and neural radiance field representations have revolutionized 3D face capture and photorealistic novel view synthesis. However, these methods often require hundreds of multi-view input images and are thus inapplicable to cases with less than a handful of inputs. We present a novel volumetric prior on human faces that allows for high-fidelity expressive face modeling from as few as three input views captured in the wild. Our key insight is that an implicit prior trained on synthetic data alone can generalize to extremely challenging real-world identities and expressions and render novel views with fine idiosyncratic details like wrinkles and eyelashes. We leverage a 3D Morphable Face Model to synthesize a large training set, rendering each identity with different expressions, hair, clothing, and other assets. We then train a conditional Neural Radiance Field prior on this synthetic dataset and, at inference time, fine-tune the model on a very sparse set of real images of a single subject. On average, the fine-tuning requires only three inputs to cross the synthetic-to-real domain gap. The resulting personalized 3D model reconstructs strong idiosyncratic facial expressions and outperforms the state-of-the-art in high-quality novel view synthesis of faces from sparse inputs in terms of perceptual and photo-metric quality.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="column is-centered has-text-centered">
+      <div class="content">
+        <h1 class="title is-3">Paper and Dataset</h1>
+      <div class="content has-text-justified">
+          <p> COMING SOON
+          </p>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+  
+
+</body>
+</html>
