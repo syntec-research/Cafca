@@ -200,3 +200,7 @@ div.input-views {
 .figure {
     max-height: 50vh;
 }
+
+.itw-video {
+    max-width: 30em;
+}
