@@ -3,7 +3,7 @@
 Download:
 [full dataset](https://dataset.ait.ethz.ch/downloads/cafca/)
 | [sample dataset](https://dataset.ait.ethz.ch/downloads/cafca/mini_sample_dataset.zip)
-| [single subject](https://dataset.ait.ethz.ch/downloads/cafca/00000.zip)
+| [single subject](https://dataset.ait.ethz.ch/downloads/cafca/single_subject_00000.zip)
 
 [Colab Quickstart](https://colab.research.google.com/github/Cafca/Cafca_Synthetic_Dataset.ipynb)
 
