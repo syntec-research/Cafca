@@ -68,7 +68,7 @@
 </style>
 
 <body>
-<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top is-link" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
             <span aria-hidden="true"></span>
@@ -89,6 +89,7 @@
             <a class="navbar-item" href="#sec-prior">Prior</a>
             <a class="navbar-item" href="#sec-limitations">Limitations</a>
             <a class="navbar-item" href="#sec-animation">Future Work</a>
+            <a class="navbar-item" href="https://github.com/syntec-research/Cafca/Dataset.md" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Dataset</a>
         </div>
         <div class="navbar-end"></div>
     </div>
@@ -161,7 +162,7 @@
                                     <!-- PDF Link. -->
                                     <span class="link-block">
                               <a href="https://drive.google.com/file/d/17CSIu9qoIQ9_TtwhjArliNzvH3sgpYmX/view?usp=sharing"
-                                 class="external-link button is-normal is-rounded is-dark">
+                                 class="external-link button is-normal is-rounded is-dark" target="_blank">
                                 <span class="icon">
                                     <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false"
                                          data-prefix="fas" data-icon="file-pdf" role="img"
@@ -174,7 +175,7 @@
                             </span>
                                     <span class="link-block">
                               <a href="https://drive.google.com/file/d/1bWoeQRyAYMFmcu4IF0dZ44G_k8B2Bdqt/view?usp=drive_link"
-                                 class="external-link button is-normal is-rounded is-dark">
+                                 class="external-link button is-normal is-rounded is-dark" target="_blank">
                                 <span class="icon">
                                     <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false"
                                          data-prefix="fas" data-icon="file-pdf" role="img"
@@ -187,7 +188,7 @@
                             </span>
                                     <span class="link-block">
                               <a href="https://drive.google.com/file/d/1hZ2QAqv0cm30WJ2rjWpfsBPARSy3ZM_T/view?usp=sharing"
-                                 class="external-link button is-normal is-rounded is-dark">
+                                 class="external-link button is-normal is-rounded is-dark" target="_blank">
                                 <span class="icon">
                                     <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false"
                                          data-prefix="fas" data-icon="file-pdf" role="img"
@@ -200,8 +201,14 @@
                             </span>
                                     <span class="link-block">
                               <a href="https://drive.google.com/file/d/1WxGwIv-K9GXWkxoPUnizJ47fybXHbjgU/view?usp=sharing"
-                                 class="external-link button is-normal is-rounded is-dark">
-                                <span>Extended Website (zip, 424 MB)</span>
+                                 class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                <span><i class="far fa-file-archive"></i>&nbsp;Extended Website (zip, 424 MB)</span>
+                              </a>
+                            </span>
+                                    <span class="link-block">
+                              <a href="https://github.com/syntec-research/Cafca/Dataset.md"
+                                 class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                <span><i class="fas fa-external-link-alt"></i>&nbsp;Dataset</span>
                               </a>
                             </span>
                                 </div>
@@ -216,13 +223,16 @@
 
 <!-- Video -->
 <section class="section">
-  <div class="container is-four-fifths">
-    <div class="columns is-centered has-text-centered">
-      <video class="ait-asset" src="ASSETS/videos/Cafca_supp_video.mp4" poster="" controls muted loop playsinline height="100%">
-        <source class="ait-asset" src="ASSETS/videos/Cafca_supp_video.mp4" type="video/mp4" />
-      </video>
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+            <video class="ait-asset" src="ASSETS/videos/Cafca_supp_video.mp4" poster="" controls muted loop playsinline
+                   autoplay height="100%">
+                <source class="ait-asset" src="ASSETS/videos/Cafca_supp_video.mp4" type="video/mp4"/>
+            </video>
+                </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <section class="section">
@@ -231,18 +241,18 @@
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
-                    Volumetric modeling and neural radiance field representations have revolutionized 3D face capture
-                    and photorealistic novel view synthesis. However, these methods often require hundreds of multi-view
+                    Volumetric modeling and neural radiance field representations have revolutionized <b>3D face capture</b>
+                    and photorealistic <b>novel view</b> synthesis. However, these methods often require hundreds of multi-view
                     input images and are thus inapplicable to cases with less than a handful of inputs.
-                    We present a novel volumetric prior on human faces that allows for high-fidelity expressive face
-                    modeling from as few as three input views captured in the wild. Our key insight is that an implicit
-                    prior trained on synthetic data alone can generalize to extremely challenging real-world identities
+                    We present a novel <b>volumetric prior</b> on human faces that allows for <b>high-fidelity expressive face
+                    modeling</b> from as few as three input views captured <b>in the wild</b>. Our key insight is that an implicit
+                    prior trained on <b>synthetic data</b> alone can generalize to extremely challenging real-world identities
                     and expressions and render novel views with fine idiosyncratic details like wrinkles and eyelashes.
                     We leverage a 3D Morphable Face Model to synthesize a large training set, rendering each identity
                     with different expressions, hair, clothing, and other assets. We then train a conditional Neural
                     Radiance Field prior on this synthetic dataset and, at inference time, fine-tune the model on a very
-                    sparse set of real images of a single subject. On average, the fine-tuning requires only three
-                    inputs to cross the synthetic-to-real domain gap. The resulting personalized 3D model reconstructs
+                    sparse set of real images of a single subject. On average, the fine-tuning requires only <b>three
+                    inputs to cross the synthetic-to-real domain gap</b>. The resulting personalized 3D model reconstructs
                     strong idiosyncratic facial expressions and outperforms the state-of-the-art in high-quality novel
                     view synthesis of faces from sparse inputs in terms of perceptual and photo-metric quality.
 
@@ -255,118 +265,137 @@
                 </div>
             </div>
         </div>
+        <div class="columns is-centered">
+            <div class="column is-four-fifths">
+                <div class="content">
+                    <video class="ait-asset" src="ASSETS/videos/teaser_animated.mp4" poster="" controls muted loop playsinline
+                           autoplay height="100%">
+                        <source class="ait-asset" src="ASSETS/videos/teaser_animated.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <!--/ Abstract. -->
 
 <br/><br/><br/>
 <hr style="width: 30%; margin: auto"/>
-
 <br/><br/><br/>
 
 <!-- Start Overview Figure -->
-<div class="columns is-centered" id="sec-method">
-    <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <div class="content">
-            <p>TL;DR;</p>
-            <ul>
-                <li>We train a <b>synthetic face prior</b> for few-shot, personalized 3D face modeling in the wild.
-                    Although the
-                    model <b>never sees a single real image during pre-training</b>, it generalizes to real and stylized
-                    face
-                    images during inference.
-                </li>
-                <li>Our new model and few-shot fine-tuning method can robustly reconstruct <b>expressive faces</b> under
-                    challenging in-the-wild lighting and synthesize photorealistic novel views from <b>only three
-                        inputs</b>.
-                </li>
-            </ul>
-        </div>
-    </div>
-    <br/>
-</div>
-<div class="column is-centered has-text-centered">
-    <div class="container">
-        <div class="columns carousel" id="carousel-overview">
-            <div class="item-1">
-                <div class="columns">
-                    <div class="column">
-                        <div class="content has-text-justified">
-                            <h3>1. Pretraining an Expressive Prior Model</h3>
-                            <p>
-                                We train an implicit prior model on synthetic renderings of a 3DMM combined with assets
-                                like hair, beard, clothing, and more.
-                                The prior takes as input a frozen 3DMM identity code <b><i>&beta;</i></b>, a frozen 3DMM
-                                expression code <b><i>&psi;</i></b>, and an optimizable latent code <b>w</b>, which
-                                models appearance, clothing, and other out-of-3DMM characteristics.
-                                The prior model <i>F</i> is a conditional Radiance Field optimized to reconstruct the
-                                training identities. Please see Sec. 3.2 in the paper for details.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <img class="ait-asset round-corners figure" src="ASSETS/images/figures/overview1.png" alt=""/>
-                    </div>
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered" id="sec-method">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Method</h2>
+                <div class="content">
+                    <p>TL;DR;</p>
+                    <p>We train a <b>synthetic face prior</b> for few-shot, personalized 3D face modeling in the wild.
+                            Although the
+                            model <b>never sees a single real image during pre-training</b>, it generalizes to real and stylized
+                            face
+                            images during inference. <br/>
+                        Our new model and few-shot fine-tuning method can robustly reconstruct <b>expressive faces</b> under
+                            challenging in-the-wild lighting and synthesize photorealistic novel views from <b>only three
+                                inputs</b>.</p>
                 </div>
             </div>
-            <div class="column item-2">
+            <br/>
+        </div>
+        <br/><br/><br/>
+        <br/><br/><br/>
+        <div class="columns">
+            <div class="column is-four-fifths">
+                <div class="container">
+                    <div class="columns carousel" id="carousel-overview">
+                        <div class="item-1">
+                            <div class="columns">
+                                <div class="column is-three-fifths">
+                                    <div class="content has-text-justified">
+                                        <h3>1. Pretraining an Expressive Prior Model</h3>
+                                        <p>
+                                            We train an implicit prior model on synthetic renderings of a 3DMM combined with assets
+                                            like hair, beard, clothing, and more.
+                                            The prior takes as input a frozen 3DMM identity code <b><i>&beta;</i></b>, a frozen 3DMM
+                                            expression code <b><i>&psi;</i></b>, and an optimizable latent code <b>w</b>, which
+                                            models appearance, clothing, and other out-of-3DMM characteristics.
+                                            The prior model <i>F</i> is a conditional Radiance Field optimized to reconstruct the
+                                            training identities. Please see Sec. 3.2 in the paper for details.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <img class="ait-asset round-corners figure" src="ASSETS/images/figures/overview1.png" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column item-2">
 
-                <div class="columns">
-                    <div class="column">
-                        <div class="content has-text-justified">
-                            <h3>2. Morphable Model Fitting and Camera Estimation</h3>
-                            <p>
-                                For inference, we capture in-the-wild face images and recover camera and 3DMM parameters
-                                from the un-calibrated input.
-                                We follow the approach of previous work <a
-                                    href="https://microsoft.github.io/DenseLandmarks/" target="_blank"
-                                    title="Dense Landmarks by Wood et al. 2022">[Wood et al. 2022]</a>
-                                and fit to dense 2D landmarks.
-                                The outputs of this step are the camera parameters, a shared identity code, and
-                                per-image expression codes. The per-image expression codes are crucial for enabling
-                                high-quality in-the-wild results because they compensate for small motion during the
-                                capture (Sec. 3.3.2 in the paper).
-                            </p>
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="content has-text-justified">
+                                        <h3>2. Morphable Model Fitting and Camera Estimation</h3>
+                                        <p>
+                                            For inference, we capture in-the-wild face images and recover camera and 3DMM parameters
+                                            from the un-calibrated input.
+                                            We follow the approach of previous work <a
+                                                href="https://microsoft.github.io/DenseLandmarks/" target="_blank"
+                                                title="Dense Landmarks by Wood et al. 2022">[Wood et al. 2022]</a>
+                                            and fit to dense 2D landmarks.
+                                            The outputs of this step are the camera parameters, a shared identity code, and
+                                            per-image expression codes. The per-image expression codes are crucial for enabling
+                                            high-quality in-the-wild results because they compensate for small motion during the
+                                            capture (Sec. 3.3.2 in the paper).
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <img class="ait-asset round-corners figure" src="ASSETS/images/figures/overview2.png" alt=""/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="column">
-                        <img class="ait-asset round-corners figure" src="ASSETS/images/figures/overview2.png" alt=""/>
-                    </div>
-                </div>
-            </div>
-            <div class="column item-3">
-                <div class="columns">
-                    <div class="column">
-                        <div class="content has-text-justified">
-                            <h3>3. Fine-tuning on Sparse Views</h3>
-                            <p>
-                                Fine-tuning requires a short warm-up
-                                phase where only the latent code for the target <b>w</b><sub>t</sub> is optimized.
-                                After that, fine-tuning optimizes all model parameters under additional constraints on
-                                the geometry and the appearance weights.
-                                We randomly sample rays from all available inputs, typically three images, and mask them
-                                to the foreground by multiplying by an
-                                estimated foreground mask. Please see Sec. 3.3.2 in the paper for more details.
-                            </p>
+                        <div class="column item-3">
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="content has-text-justified">
+                                        <h3>3. Fine-tuning on Sparse Views</h3>
+                                        <p>
+                                            Fine-tuning requires a short warm-up
+                                            phase where only the latent code for the target <b>w</b><sub>t</sub> is optimized.
+                                            After that, fine-tuning optimizes all model parameters under additional constraints on
+                                            the geometry and the appearance weights.
+                                            We randomly sample rays from all available inputs, typically three images, and mask them
+                                            to the foreground by multiplying by an
+                                            estimated foreground mask. Please see Sec. 3.3.2 in the paper for more details.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <img class="ait-asset round-corners figure" src="ASSETS/images/figures/overview3.png" alt=""/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="column">
-                        <img class="ait-asset round-corners figure" src="ASSETS/images/figures/overview3.png" alt=""/>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <!-- End Overview Figure -->
+
+<br/><br/><br/>
+<hr style="width: 30%; margin: auto"/>
+<br/><br/><br/>
+
 <!-- Start in-the-wild -->
 <section class="section" id="sec-itw">
     <div class="container is-max-desktop">
-        <div class="column is-centered has-text-centered">
+        <div class="columns">
+            <div class="column is-centered is-four-fifths">
             <div class="content">
-                <h2 class="title is-3 has-text-centered">In-the-Wild Results</h2>
-                <div class="content has-text-justified">
+                <h2 class="title is-3">In-the-Wild Results</h2>
+                <div class="has-text-justified">
                     <p>
                         We demonstrate the generalization capability of our method to in-the-wild mobile
                         camera captures. With just 3 input views, our method is able to generate highly
@@ -376,12 +405,10 @@
                     </p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<div class="column is-centered has-text-centered">
-    <div class="container">
+            </div>
+            </div>
+        <div class="columns">
+            <div class="column is-centered has-text-centered is-four-fifths">
         <div class="columns carousel" id="carousel-itw">
             <div class="column item-1">
                 <div class="content">
@@ -401,7 +428,7 @@
                     <h3 class="has-text-centered">Novel View Synthesis</h3>
                 </div>
                 <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" class="itw-video">
                         <source
                                 class="ait-asset"
                                 src="ASSETS/videos/inthewild/cafca/multi_240117_003_001_itwseq_v2_down1_bs4096_n3_f25_vdir0.0001_v1_fitting_path_renders_step_50000_color_cropped.mp4"
@@ -428,7 +455,7 @@
                     <h3 class="has-text-centered">Novel View Synthesis</h3>
                 </div>
                 <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" class="itw-video">
                         <source
                                 class="ait-asset"
                                 src="ASSETS/videos/inthewild/cafca/multi_240117_000_000_itwseq_v2_down2_bs4096_n3_f25_vdir0.0001_v0_fitting_path_renders_step_50000_color_cropped.mp4"
@@ -455,7 +482,7 @@
                     <h3 class="has-text-centered">Novel View Synthesis</h3>
                 </div>
                 <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" class="itw-video">
                         <source
                                 class="ait-asset"
                                 src="ASSETS/videos/inthewild/cafca/multi_0d624022_003_itwseq_v2_down2_bs4096_n3_f25_vdir0.0001_v0_fitting_path_renders_step_50000_color_cropped.mp4"
@@ -482,7 +509,7 @@
                     <h3 class="has-text-centered">Novel View Synthesis</h3>
                 </div>
                 <div class="content">
-                    <video poster="" id="03a_rgb" autoplay controls muted loop playsinline height="100%" preload="auto">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" preload="auto" class="itw-video">
                         <source
                                 class="ait-asset"
                                 src="ASSETS/videos/inthewild/cafca/multi_240116_001_001_itwseq_v2_down2_bs4096_n3_f25_vdir0.0001_v1_fitting_path_renders_step_50000_color_cropped.mp4"
@@ -491,17 +518,23 @@
                     </video>
                 </div>
             </div>
-        </div>
     </div>
 </div>
+        </div>
+    </div>
+</section>
 <!-- End in-the-wild -->
+
+<br/><br/><br/>
+<hr style="width: 30%; margin: auto"/>
+<br/><br/><br/>
 
 <!-- Start One-shot -->
 <section class="section" id="sec-oneshot">
     <div class="container is-max-desktop">
-        <div class="column is-centered has-text-centered">
+        <div class="column is-centered">
             <div class="content">
-                <h2 class="title is-3 has-text-centered">One-shot Synthesis In-the-wild</h2>
+                <h2 class="title is-3">One-shot Synthesis In-the-wild</h2>
                 <div class="content has-text-justified">
                     <p>
                         Synthesis from single view naturally suffers from bas-relief ambiguity making it
@@ -661,12 +694,17 @@
     </div>
 </div>
 <!-- End One-shot -->
+
+<br/><br/><br/>
+<hr style="width: 30%; margin: auto"/>
+<br/><br/><br/>
+
 <!-- Start Prior Model -->
 <section class="section" id="sec-prior">
     <div class="container is-max-desktop">
-        <div class="column is-centered has-text-centered">
+        <div class="column is-centered">
             <div class="content">
-                <h2 class="title is-3 has-text-centered">Synthetic Prior Model</h2>
+                <h2 class="title is-3">Synthetic Prior Model</h2>
                 <div class="columns">
                     <div class="column">
                         <div class="content has-text-justified">
@@ -690,7 +728,6 @@
         </div>
     </div>
 </section>
-
 <div class="column is-centered has-text-centered">
     <div class="container">
         <div class="columns carousel" id="carousel-prior">
@@ -739,13 +776,16 @@
 </div>
 <!-- End Prior Model -->
 
+<br/><br/><br/>
+<hr style="width: 30%; margin: auto"/>
+<br/><br/><br/>
 
 <!-- Start Limitations -->
 <section class="section" id="sec-limitations">
     <div class="container is-max-desktop">
-        <div class="column is-centered has-text-centered">
+        <div class="column is-centered">
             <div class="content">
-                <h3 class="title is-3 has-text-centered">Limitations</h3>
+                <h3 class="title is-3">Limitations</h3>
                 <div class="content has-text-justified">
                     <p>
                         Our synthetic prior is trained on glasses, however only 20% of the synthetic
@@ -762,7 +802,6 @@
         </div>
     </div>
 </section>
-
 <div class="column is-centered has-text-centered">
     <div class="container">
         <div class="columns">
@@ -870,12 +909,16 @@
 </div>
 <!-- End Limitations -->
 
+<br/><br/><br/>
+<hr style="width: 30%; margin: auto"/>
+<br/><br/><br/>
+
 <!-- Start Future Work -->
 <section class="section" id="sec-animation">
     <div class="container is-max-desktop">
-        <div class="column is-centered has-text-centered">
+        <div class="column is-centered">
             <div class="content">
-                <h3 class="title is-3 has-text-centered">Future Work: Animation</h3>
+                <h3 class="title is-3">Future Work: Animation</h3>
                 <div class="content has-text-justified">
                     <p>
                         While our focus is on novel view synthesis of static faces, future work could
@@ -890,7 +933,6 @@
         </div>
     </div>
 </section>
-
 <div class="column is-centered has-text-centered">
     <div class="container">
         <div class="columns">
@@ -942,6 +984,32 @@
 </div>
 <!-- End Future Work -->
 
+<!--<br/><br/><br/>-->
+<!--<hr style="width: 30%; margin: auto"/>-->
+<!--<br/><br/><br/>-->
+
+<!-- Start Citation -->
+<!--<section class="section">-->
+<!--    <div class="container is-max-desktop">-->
+<!--        <div class="column is-centered">-->
+<!--            <div class="container">-->
+<!--                <div class="columns">-->
+<!--                    <div class="column">-->
+<!--                        If you find this work useful, please consider citing:-->
+<!--                        <pre class="citation">@incollection{buehler2024cafca,-->
+<!--    title={Cafca: High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot Captures},-->
+<!--    author={TODO},-->
+<!--    booktitle={SIGGRAPH Asia 2024 Technical Communications},-->
+<!--    year={2024}-->
+<!--    }-->
+<!--</pre>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!-- End Citation -->-->
 
 <footer class="footer">
     <div class="container">
