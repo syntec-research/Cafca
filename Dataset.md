@@ -5,7 +5,7 @@ Download:
 | [sample dataset](https://dataset.ait.ethz.ch/downloads/cafca/mini_sample_dataset.zip)
 | [single subject](https://dataset.ait.ethz.ch/downloads/cafca/single_subject_00000.zip)
 
-[Colab Quickstart](https://colab.research.google.com/github/Cafca/Cafca_Synthetic_Dataset.ipynb)
+[Colab Quickstart](https://colab.research.google.com/github/syntec-research/Cafca/blob/main/Cafca_Synthetic_Dataset.ipynb)
 
 The full dataset contains 1,500 synthetic subjects, each of which is rendered with 13 expressions in 3 environments from 30 views,
 resulting in 1.755 Mio. images. The dataset is split into 15 chunks. Each chunk is about 67 GB and contains 100 identities.
