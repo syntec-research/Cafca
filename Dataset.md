@@ -56,6 +56,20 @@ these parameters individually.
 Please let us know how we improve the documentation and help you get started. If you use this dataset please
 consider citing the [Cafca paper](https://syntec-research.github.io/Cafca).
 
+## Citation
+If you find this dataset useful, please consider citing:
+
+```
+@incollection{buehler2024cafca,
+    title={Cafca: High-quality Novel View Synthesis of~ Expressive Faces from Casual Few-shot Captures},
+    author={Marcel C. Buehler and Gengyan Li and Erroll Wood and Leonhard Helminger and Xu Chen and Tanmay Shah and Daoye Wang and Stephan Garbin and Sergio Orts-Escolano and Otmar Hilliges and Dmitry Lagun and Jérémy Riviere and Paulo Gotardo and Thabo Beeler and Abhimitra Meka and Kripasindhu Sarkar},
+    year={2024},
+    booktitle={ACM SIGGRAPH Asia 2024 Conference Paper},
+    doi={10.1145/3680528.3687580},
+    url={https://doi.org/10.1145/3680528}
+}
+```
+
 ## Disclaimer
 
 This dataset is not an official Google product. It is not supported by
