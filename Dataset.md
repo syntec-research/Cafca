@@ -20,7 +20,7 @@ Download:
 
 [![](https://files.ait.ethz.ch/projects/cafca/web/static/images/dataset_teaser.jpg)](https://files.ait.ethz.ch/projects/cafca/web/static/videos/dataset_video_short.mp4)
 
-The full dataset contains 1,500 synthetic subjects, each of which is rendered with 13 expressions in 3 environments from 30 views,
+The full dataset contains 1,500 synthetic subjects, each of which is rendered in 3 environments with 13 random expressions from 30 views,
 resulting in 1.755 Mio. images. The dataset is split into 15 chunks. Each chunk is about 67 GB and contains 100 identities.
 
 If you want to get started quickly, you can use the colab or download a subset of the dataset from the links above.
@@ -41,13 +41,12 @@ After unzipping, the dataset is structured as follows:
 
 The dataset contains each expression rendered in three different environments. The first environment (index `000`) is
 the same for all expressions (`Laval_Indoor_9C4A5690_8k.exr`). The other two environments are picked at random from
-the [Laval Indoor Dataset](http://indoor.hdrdb.com/). The environment name is saved in `environment.json` in
+the [Laval Indoor Dataset](http://indoor.hdrdb.com/). Environment indices are consistent within an identity but not across identities. The environment name is saved in `environment.json` in
 the `color_image` folder.
 
 ## Expressions
 
-The expressions (00001...00012) are sampled randomly for each environment. They are not consistent across different environments. Only the neutral expression (00000) is
-fixed for all samples.
+The expressions (00001...00012) are sampled randomly for each environment. Note that the expression indices are not consistent across different environments. Only the neutral expression (00000) is fixed for all samples.
 
 ## Coordinate System
 
