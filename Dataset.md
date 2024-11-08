@@ -37,13 +37,17 @@ After unzipping, the dataset is structured as follows:
 
 `SUBJECT` and `EXP` are 5-digit numbers. `ENV` is a 3-digit number. Camera names go from `C00` to `C29`. Image data (RGB, foreground masks, and segmentation maps) are saved as PNG; the cameras as JSON. Please see the colab for an example on how to load a particular scene.
 
-
 ## Environments
 
 The dataset contains each expression rendered in three different environments. The first environment (index `000`) is
 the same for all expressions (`Laval_Indoor_9C4A5690_8k.exr`). The other two environments are picked at random from
 the [Laval Indoor Dataset](http://indoor.hdrdb.com/). The environment name is saved in `environment.json` in
 the `color_image` folder.
+
+## Expressions
+
+The expressions (00001...00012) are sampled randomly for each environment. They are not consistent across different environments. Only the neutral expression (00000) is
+fixed for all samples.
 
 ## Coordinate System
 
