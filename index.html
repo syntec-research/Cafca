@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="description"
-          content="Cafca: High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot Captures"/>
-    <meta name="keywords" content="Cafca"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        content="Cafca: High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot Captures" />
+    <meta name="keywords" content="Cafca" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
         Cafca: High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot Face
         Captures
@@ -16,15 +16,15 @@
         window.dataLayer = window.dataLayer || [];
     </script>
 
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
 
-    <link rel="stylesheet" href="./static/css/bulma.min.css"/>
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"/>
-    <link rel="stylesheet" href="./static/css/academicons.min.css"/>
-    <link rel="stylesheet" href="./static/css/index.css"/>
-    <link rel="icon" href="./static/images/favicon.svg"/>
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="./static/css/academicons.min.css" />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="icon" href="./static/images/favicon.svg" />
 
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
     <script type="text/javascript" src="/node_modules/bulma-accordion/dist/js/bulma-accordion.min.js"></script>
@@ -64,366 +64,359 @@
 </style>
 
 <body>
-<nav class="navbar is-fixed-top is-link" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-    <div id="navbar" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="index.html"> Home </a>
-            <a class="navbar-item" href="#sec-method"> Method </a>
-            <a class="navbar-item" href="#sec-itw"> In-the-wild </a>
-            <a class="navbar-item" href="#sec-oneshot"> One-shot Results </a>
-            <a class="navbar-item" href="#sec-prior">Prior</a>
-            <a class="navbar-item" href="#sec-limitations">Limitations</a>
-            <a class="navbar-item" href="#sec-animation">Future Work</a>
-            <a class="navbar-item" href="https://github.com/syntec-research/Cafca/blob/main/Dataset.md"
-               target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Dataset</a>
+    <nav class="navbar is-fixed-top is-link" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-        <div class="navbar-end"></div>
-    </div>
-</nav>
-<section class="hero">
-    <div class="container">-</div>
-</section>
+        <div id="navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html"> Home </a>
+                <a class="navbar-item" href="#sec-method"> Method </a>
+                <a class="navbar-item" href="#sec-itw"> In-the-wild </a>
+                <a class="navbar-item" href="#sec-oneshot"> One-shot Results </a>
+                <a class="navbar-item" href="#sec-prior">Prior</a>
+                <a class="navbar-item" href="#sec-limitations">Limitations</a>
+                <a class="navbar-item" href="#sec-animation">Future Work</a>
+                <a class="navbar-item" href="https://github.com/syntec-research/Cafca/blob/main/Dataset.md"
+                    target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Dataset</a>
+            </div>
+            <div class="navbar-end"></div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">-</div>
+    </section>
 
 
-<section class="hero" id="sec-top">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">
-                        Cafca: High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot
-                        Captures
-                    </h1>
-                    <div>
-                        <div class="is-size-5 publication-authors">
+    <section class="hero" id="sec-top">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">
+                            Cafca: High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot
+                            Captures
+                        </h1>
+                        <div>
+                            <div class="is-size-5 publication-authors">
                                 <span class="author-block"><a href="https://ait.ethz.ch/people/buehler"
-                                                              target="_blank">Marcel C. Bühler</a><sup>1,2</sup>,</span>
-                            <span class="author-block"><a href="https://ait.ethz.ch/people/lig"
-                                                          target="_blank">Gengyan Li</a><sup>1,2</sup>,</span>
-                            <span class="author-block"><a href="https://errollw.com/" target="_blank">Erroll
+                                        target="_blank">Marcel C. Bühler</a><sup>1,2</sup>,</span>
+                                <span class="author-block"><a href="https://ait.ethz.ch/people/lig"
+                                        target="_blank">Gengyan Li</a><sup>1,2</sup>,</span>
+                                <span class="author-block"><a href="https://errollw.com/" target="_blank">Erroll
                                         Wood</a><sup>2</sup>,</span>
-                            <span class="author-block"><a
-                                    href="https://scholar.google.com/citations?user=mTTsIr4AAAAJ&amp;hl=en"
-                                    target="_blank">Leonhard Helminger</a><sup>2</sup>,</span>
-                            <span class="author-block"><a href="https://xuchen-ethz.github.io/" target="_blank">Xu
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=mTTsIr4AAAAJ&amp;hl=en"
+                                        target="_blank">Leonhard Helminger</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="https://xuchen-ethz.github.io/" target="_blank">Xu
                                         Chen</a><sup>2</sup>,</span>
-                            <span class="author-block"><a
-                                    href="https://scholar.google.com/citations?user=USYxdJ4AAAAJ&amp;hl=en&amp;oi=ao"
-                                    target="_blank">Tanmay Shah</a><sup>2</sup>,</span>
-                            <span class="author-block"><a
-                                    href="https://scholar.google.com/citations?user=pe5XLTEAAAAJ&amp;hl=en"
-                                    target="_blank">Daoye Wang</a><sup>2</sup>,</span>
-                            <span class="author-block"><a href="http://stephangarbin.com/" target="_blank">Stephan
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=USYxdJ4AAAAJ&amp;hl=en&amp;oi=ao"
+                                        target="_blank">Tanmay Shah</a><sup>2</sup>,</span>
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=pe5XLTEAAAAJ&amp;hl=en"
+                                        target="_blank">Daoye Wang</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="http://stephangarbin.com/" target="_blank">Stephan
                                         Garbin</a><sup>2</sup>,</span>
-                            <span class="author-block"><a
-                                    href="https://scholar.google.com/citations?user=dznX1DMAAAAJ&amp;hl=es"
-                                    target="_blank">Sergio Orts-Escolano</a><sup>2</sup>,</span>
-                            <span class="author-block"><a href="https://ait.ethz.ch/people/hilliges"
-                                                          target="_blank">Otmar Hilliges</a><sup>1</sup>,</span>
-                            <span class="author-block"><a
-                                    href="https://scholar.google.com/citations?user=sY8lt7AAAAAJ&amp;hl=en"
-                                    target="_blank">Dmitry Lagun</a><sup>2</sup>,</span>
-                            <span class="author-block"><a
-                                    href="https://scholar.google.com/citations?user=FaLQzRAAAAAJ"
-                                    target="_blank">Jérémy Riviere</a><sup>2</sup>,</span>
-                            <span class="author-block"><a href="https://www.paulogotardo.com/" target="_blank">Paulo
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=dznX1DMAAAAJ&amp;hl=es"
+                                        target="_blank">Sergio Orts-Escolano</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="https://ait.ethz.ch/people/hilliges"
+                                        target="_blank">Otmar Hilliges</a><sup>1</sup>,</span>
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=sY8lt7AAAAAJ&amp;hl=en"
+                                        target="_blank">Dmitry Lagun</a><sup>2</sup>,</span>
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=FaLQzRAAAAAJ"
+                                        target="_blank">Jérémy Riviere</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="https://www.paulogotardo.com/" target="_blank">Paulo
                                         Gotardo</a><sup>2</sup>,</span>
-                            <span class="author-block"><a href="https://thabobeeler.com/" target="_blank">Thabo
+                                <span class="author-block"><a href="https://thabobeeler.com/" target="_blank">Thabo
                                         Beeler</a><sup>2</sup>,</span>
-                            <span class="author-block"><a href="https://www.meka.page/" target="_blank">Abhimitra
+                                <span class="author-block"><a href="https://www.meka.page/" target="_blank">Abhimitra
                                         Meka</a><sup>2</sup>,</span>
-                            <span class="author-block"><a href="https://krips89.github.io/profile_page/"
-                                                          target="_blank">Kripasindhu Sarkar</a><sup>2</sup></span>
-                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"><a href="https://krips89.github.io/profile_page/"
+                                        target="_blank">Kripasindhu Sarkar</a><sup>2</sup></span>
+                                <div class="is-size-5 publication-authors">
                                     <span class="author-block"><sup>1</sup><a href="https://ait.ethz.ch/"
-                                                                              target="_blank"
-                                                                              title="AIT Lab at ETH Zurich">ETH Zurich</a>,</span>
-                                <span class="author-block"><sup>2</sup><a href="https://arvr.google.com/"
-                                                                          target="_blank"
-                                                                          title="Google AR/VR">Google</a></span>
-                            </div>
-                            <div class="is-size-5 publication-authors">
-                                <span class="author-block">-</span>
-                            </div>
-                            <div class="is-size-5 publication-authors">
+                                            target="_blank" title="AIT Lab at ETH Zurich">ETH Zurich</a>,</span>
+                                    <span class="author-block"><sup>2</sup><a href="https://arvr.google.com/"
+                                            target="_blank" title="Google AR/VR">Google</a></span>
+                                </div>
+                                <div class="is-size-5 publication-authors">
+                                    <span class="author-block">-</span>
+                                </div>
+                                <div class="is-size-5 publication-authors">
                                     <span class="author-block small-img" style="background-color: #FFDE75;"><a
                                             href="https://asia.siggraph.org/2024/" target="_blank"
                                             title="SIGGRAPH Asia 2024 Website"><img
-                                            src="static/sga_logo.png"/></a></span>
+                                                src="static/sga_logo.png" /></a></span>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                            <br>
-                            <div class="is-size-5 ">
-                                <div class="publication-links">
-                                    <!-- PDF Link. -->
-                                    <span class="link-block">
-                                            <a href="http://arxiv.org/abs/2410.00630"
-                                               class="external-link button is-normal is-rounded is-dark"
-                                               target="_blank">
-                                                <span class="icon">
-                                                    <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true"
-                                                         focusable="false" data-prefix="fas" data-icon="file-pdf"
-                                                         role="img" xmlns="http://www.w3.org/2000/svg"
-                                                         viewBox="0 0 384 512" data-fa-i2svg="">
-                                                        <path fill="currentColor"
-                                                              d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                                <span>Paper (arxiv)</span>
-                                            </a>
+                        <br>
+                        <div class="is-size-5 ">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="http://arxiv.org/abs/2410.00630"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                        <span class="icon">
+                                            <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="file-pdf" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z">
+                                                </path>
+                                            </svg>
                                         </span>
-                                    <span class="link-block"><a href="https://youtu.be/soNSzodOUvs"
-                                        class="external-link button is-normal is-rounded is-dark"
-                                        target="_blank">
+                                        <span>Paper (arxiv)</span>
+                                    </a>
+                                </span>
+                                <span class="link-block"><a href="https://youtu.be/soNSzodOUvs"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank">
                                         <i class="fas fa-external-link-alt"></i>&nbsp;
-                                        Talk 
-                                        </a>
-                                    </span>
-                                    <span class="link-block">
-                                            <a href="https://drive.google.com/file/d/16dHrjES1JnOexfoCc_EVdS7mabCMXS6h/view?usp=sharing"
-                                               class="external-link button is-normal is-rounded is-dark"
-                                               target="_blank">
-                                                <span class="icon">
-                                                    <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true"
-                                                         focusable="false" data-prefix="fas" data-icon="file-pdf"
-                                                         role="img" xmlns="http://www.w3.org/2000/svg"
-                                                         viewBox="0 0 384 512" data-fa-i2svg="">
-                                                        <path fill="currentColor"
-                                                              d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                                <span>Uncompressed (100 MB)</span>
-                                            </a>
+                                        Talk
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://drive.google.com/file/d/16dHrjES1JnOexfoCc_EVdS7mabCMXS6h/view?usp=sharing"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                        <span class="icon">
+                                            <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="file-pdf" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z">
+                                                </path>
+                                            </svg>
                                         </span>
-                                    <span class="link-block">
-                                            <a href="https://drive.google.com/file/d/1WxGwIv-K9GXWkxoPUnizJ47fybXHbjgU/view?usp=sharing"
-                                               class="external-link button is-normal is-rounded is-dark"
-                                               target="_blank">
-                                                <span><i class="far fa-file-archive"></i>&nbsp;Extended Website (zip,
-                                                    424 MB)</span>
-                                            </a>
-                                        </span>
-                                    <span class="link-block">
-                                            <a href="https://github.com/syntec-research/Cafca/blob/main/Dataset.md"
-                                               class="external-link button is-normal is-rounded is-dark"
-                                               target="_blank">
-                                                <span><i class="fas fa-external-link-alt"></i>&nbsp;Synt. Dataset</span>
-                                            </a>
-                                        </span>
-                                    <span class="link-block">
-                                            <a href="https://dataset.ait.ethz.ch/downloads/cafca/itw_dataset.zip"
-                                               class="external-link button is-normal is-rounded is-dark"
-                                               target="_blank">
-                                                <span><i class="far fa-file-archive"></i>&nbsp;In-the-wild Dataset (zip,
-                                                    23 MB)</span>
-                                            </a>
-                                        </span>
-                                </div>
+                                        <span>Uncompressed (100 MB)</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://drive.google.com/file/d/1WxGwIv-K9GXWkxoPUnizJ47fybXHbjgU/view?usp=sharing"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                        <span><i class="far fa-file-archive"></i>&nbsp;Extended Website (zip,
+                                            424 MB)</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://github.com/syntec-research/Cafca/blob/main/Dataset.md"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                        <span><i class="fas fa-external-link-alt"></i>&nbsp;Synt. Dataset</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://dataset.ait.ethz.ch/downloads/cafca/itw_dataset.zip"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                        <span><i class="far fa-file-archive"></i>&nbsp;In-the-wild Dataset (zip,
+                                            23 MB)</span>
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Video -->
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <video class="ait-asset" src="ASSETS/videos/Cafca_supp_video.mp4" poster="" controls muted loop
-                       playsinline autoplay height="100%">
-                    <source class="ait-asset" src="ASSETS/videos/Cafca_supp_video.mp4" type="video/mp4"/>
-                </video>
-            </div>
         </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Abstract</h2>
-                <div class="content has-text-justified">
-                    Volumetric modeling and neural radiance field representations have revolutionized <b>3D face
-                    capture</b>
-                    and photorealistic <b>novel view</b> synthesis. However, these methods often require hundreds of
-                    multi-view
-                    input images and are thus inapplicable to cases with less than a handful of inputs.
-                    We present a novel <b>volumetric prior</b> on human faces that allows for <b>high-fidelity
-                    expressive face
-                    modeling</b> from as few as three input views captured <b>in the wild</b>. Our key insight
-                    is that an implicit
-                    prior trained on <b>synthetic data</b> alone can generalize to extremely challenging real-world
-                    identities
-                    and expressions and render novel views with fine idiosyncratic details like wrinkles and
-                    eyelashes.
-                    We leverage a 3D Morphable Face Model to synthesize a large training set, rendering each
-                    identity
-                    with different expressions, hair, clothing, and other assets. We then train a conditional Neural
-                    Radiance Field prior on this synthetic dataset and, at inference time, fine-tune the model on a
-                    very
-                    sparse set of real images of a single subject. On average, the fine-tuning requires only
-                    <b>three
-                        inputs to cross the synthetic-to-real domain gap</b>. The resulting personalized 3D model
-                    reconstructs
-                    strong idiosyncratic facial expressions and outperforms the state-of-the-art in high-quality
-                    novel
-                    view synthesis of faces from sparse inputs in terms of perceptual and photo-metric quality.
-
-                </div>
-                <div class="content has-text-justified">
-                    Please use the links in the navigation bar to quickly jump to results.
-                </div>
-                <div class="content has-text-justified">
-                    <i>We recommend using Chrome for playing the videos.</i>
-                </div>
-            </div>
         </div>
-        <div class="columns is-centered">
-            <div class="column is-four-fifths">
-                <div class="content">
-                    <video class="ait-asset" src="ASSETS/videos/teaser_animated.mp4" poster="" controls muted loop
-                           playsinline autoplay height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/teaser_animated.mp4" type="video/mp4"/>
+    </section>
+
+    <!-- Video -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <video class="ait-asset" src="ASSETS/videos/Cafca_supp_video.mp4" poster="" controls muted loop
+                        playsinline autoplay height="100%">
+                        <source class="ait-asset" src="ASSETS/videos/Cafca_supp_video.mp4" type="video/mp4" />
                     </video>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--/ Abstract. -->
+    </section>
 
-<br/><br/><br/>
-<hr style="width: 30%; margin: auto"/>
-<br/><br/><br/>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        Volumetric modeling and neural radiance field representations have revolutionized <b>3D face
+                            capture</b>
+                        and photorealistic <b>novel view</b> synthesis. However, these methods often require hundreds of
+                        multi-view
+                        input images and are thus inapplicable to cases with less than a handful of inputs.
+                        We present a novel <b>volumetric prior</b> on human faces that allows for <b>high-fidelity
+                            expressive face
+                            modeling</b> from as few as three input views captured <b>in the wild</b>. Our key insight
+                        is that an implicit
+                        prior trained on <b>synthetic data</b> alone can generalize to extremely challenging real-world
+                        identities
+                        and expressions and render novel views with fine idiosyncratic details like wrinkles and
+                        eyelashes.
+                        We leverage a 3D Morphable Face Model to synthesize a large training set, rendering each
+                        identity
+                        with different expressions, hair, clothing, and other assets. We then train a conditional Neural
+                        Radiance Field prior on this synthetic dataset and, at inference time, fine-tune the model on a
+                        very
+                        sparse set of real images of a single subject. On average, the fine-tuning requires only
+                        <b>three
+                            inputs to cross the synthetic-to-real domain gap</b>. The resulting personalized 3D model
+                        reconstructs
+                        strong idiosyncratic facial expressions and outperforms the state-of-the-art in high-quality
+                        novel
+                        view synthesis of faces from sparse inputs in terms of perceptual and photo-metric quality.
 
-<!-- Start Overview Figure -->
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered" id="sec-method">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Method</h2>
-                <div class="content">
-                    <p>TL;DR;</p>
-                    <p>We train a <b>synthetic face prior</b> for few-shot, personalized 3D face modeling in the
-                        wild.
-                        Although the
-                        model <b>never sees a single real image during pre-training</b>, it generalizes to real and
-                        stylized
-                        face
-                        images during inference. <br/>
-                        Our new model and few-shot fine-tuning method can robustly reconstruct <b>expressive
-                            faces</b> under
-                        challenging in-the-wild lighting and synthesize photorealistic novel views from <b>only
-                            three
-                            inputs</b>.</p>
+                    </div>
+                    <div class="content has-text-justified">
+                        Please use the links in the navigation bar to quickly jump to results.
+                    </div>
+                    <div class="content has-text-justified">
+                        <i>We recommend using Chrome for playing the videos.</i>
+                    </div>
                 </div>
             </div>
-            <br/>
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <div class="content">
+                        <video class="ait-asset" src="ASSETS/videos/teaser_animated.mp4" poster="" controls muted loop
+                            playsinline autoplay height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/teaser_animated.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br/><br/><br/>
-        <br/><br/><br/>
-        <div class="columns">
-            <div class="column is-four-fifths">
-                <div class="container">
-                    <div class="columns carousel" id="carousel-overview">
-                        <div class="item-1">
-                            <div class="columns">
-                                <div class="column is-three-fifths">
-                                    <div class="content has-text-justified">
-                                        <h3>1. Pretraining an Expressive Prior Model</h3>
-                                        <p>
-                                            We train an implicit prior model on synthetic renderings of a 3DMM
-                                            combined with assets
-                                            like hair, beard, clothing, and more.
-                                            The prior takes as input a frozen 3DMM identity code
-                                            <b><i>&beta;</i></b>, a frozen 3DMM
-                                            expression code <b><i>&psi;</i></b>, and an optimizable latent code
-                                            <b>w</b>, which
-                                            models appearance, clothing, and other out-of-3DMM characteristics.
-                                            The prior model <i>F</i> is a conditional Radiance Field optimized to
-                                            reconstruct the
-                                            training identities. Please see Sec. 3.2 in the paper for details.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <img class="ait-asset round-corners figure"
-                                         src="ASSETS/images/figures/overview1.png" alt=""/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column item-2">
+    </section>
+    <!--/ Abstract. -->
 
-                            <div class="columns">
-                                <div class="column">
-                                    <div class="content has-text-justified">
-                                        <h3>2. Morphable Model Fitting and Camera Estimation</h3>
-                                        <p>
-                                            For inference, we capture in-the-wild face images and recover camera and
-                                            3DMM parameters
-                                            from the un-calibrated input.
-                                            We follow the approach of previous work <a
-                                                href="https://microsoft.github.io/DenseLandmarks/" target="_blank"
-                                                title="Dense Landmarks by Wood et al. 2022">[Wood et al. 2022]</a>
-                                            and fit to dense 2D landmarks.
-                                            The outputs of this step are the camera parameters, a shared identity
-                                            code, and
-                                            per-image expression codes. The per-image expression codes are crucial
-                                            for enabling
-                                            high-quality in-the-wild results because they compensate for small
-                                            motion during the
-                                            capture (Sec. 3.3.2 in the paper).
-                                        </p>
+    <br /><br /><br />
+    <hr style="width: 30%; margin: auto" />
+    <br /><br /><br />
+
+    <!-- Start Overview Figure -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered" id="sec-method">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Method</h2>
+                    <div class="content">
+                        <p>TL;DR;</p>
+                        <p>We train a <b>synthetic face prior</b> for few-shot, personalized 3D face modeling in the
+                            wild.
+                            Although the
+                            model <b>never sees a single real image during pre-training</b>, it generalizes to real and
+                            stylized
+                            face
+                            images during inference. <br />
+                            Our new model and few-shot fine-tuning method can robustly reconstruct <b>expressive
+                                faces</b> under
+                            challenging in-the-wild lighting and synthesize photorealistic novel views from <b>only
+                                three
+                                inputs</b>.</p>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <br /><br /><br />
+            <br /><br /><br />
+            <div class="columns">
+                <div class="column is-four-fifths">
+                    <div class="container">
+                        <div class="columns carousel" id="carousel-overview">
+                            <div class="item-1">
+                                <div class="columns">
+                                    <div class="column is-three-fifths">
+                                        <div class="content has-text-justified">
+                                            <h3>1. Pretraining an Expressive Prior Model</h3>
+                                            <p>
+                                                We train an implicit prior model on synthetic renderings of a 3DMM
+                                                combined with assets
+                                                like hair, beard, clothing, and more.
+                                                The prior takes as input a frozen 3DMM identity code
+                                                <b><i>&beta;</i></b>, a frozen 3DMM
+                                                expression code <b><i>&psi;</i></b>, and an optimizable latent code
+                                                <b>w</b>, which
+                                                models appearance, clothing, and other out-of-3DMM characteristics.
+                                                The prior model <i>F</i> is a conditional Radiance Field optimized to
+                                                reconstruct the
+                                                training identities. Please see Sec. 3.2 in the paper for details.
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="column">
-                                    <img class="ait-asset round-corners figure"
-                                         src="ASSETS/images/figures/overview2.png" alt=""/>
+                                    <div class="column">
+                                        <img class="ait-asset round-corners figure"
+                                            src="ASSETS/images/figures/overview1.png" alt="" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column item-3">
-                            <div class="columns">
-                                <div class="column">
-                                    <div class="content has-text-justified">
-                                        <h3>3. Fine-tuning on Sparse Views</h3>
-                                        <p>
-                                            Fine-tuning requires a short warm-up
-                                            phase where only the latent code for the target <b>w</b><sub>t</sub> is
-                                            optimized.
-                                            After that, fine-tuning optimizes all model parameters under additional
-                                            constraints on
-                                            the geometry and the appearance weights.
-                                            We randomly sample rays from all available inputs, typically three
-                                            images, and mask them
-                                            to the foreground by multiplying by an
-                                            estimated foreground mask. Please see Sec. 3.3.2 in the paper for more
-                                            details.
-                                        </p>
+                            <div class="column item-2">
+
+                                <div class="columns">
+                                    <div class="column">
+                                        <div class="content has-text-justified">
+                                            <h3>2. Morphable Model Fitting and Camera Estimation</h3>
+                                            <p>
+                                                For inference, we capture in-the-wild face images and recover camera and
+                                                3DMM parameters
+                                                from the un-calibrated input.
+                                                We follow the approach of previous work <a
+                                                    href="https://microsoft.github.io/DenseLandmarks/" target="_blank"
+                                                    title="Dense Landmarks by Wood et al. 2022">[Wood et al. 2022]</a>
+                                                and fit to dense 2D landmarks.
+                                                The outputs of this step are the camera parameters, a shared identity
+                                                code, and
+                                                per-image expression codes. The per-image expression codes are crucial
+                                                for enabling
+                                                high-quality in-the-wild results because they compensate for small
+                                                motion during the
+                                                capture (Sec. 3.3.2 in the paper).
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <img class="ait-asset round-corners figure"
+                                            src="ASSETS/images/figures/overview2.png" alt="" />
                                     </div>
                                 </div>
-                                <div class="column">
-                                    <img class="ait-asset round-corners figure"
-                                         src="ASSETS/images/figures/overview3.png" alt=""/>
+                            </div>
+                            <div class="column item-3">
+                                <div class="columns">
+                                    <div class="column">
+                                        <div class="content has-text-justified">
+                                            <h3>3. Fine-tuning on Sparse Views</h3>
+                                            <p>
+                                                Fine-tuning requires a short warm-up
+                                                phase where only the latent code for the target <b>w</b><sub>t</sub> is
+                                                optimized.
+                                                After that, fine-tuning optimizes all model parameters under additional
+                                                constraints on
+                                                the geometry and the appearance weights.
+                                                We randomly sample rays from all available inputs, typically three
+                                                images, and mask them
+                                                to the foreground by multiplying by an
+                                                estimated foreground mask. Please see Sec. 3.3.2 in the paper for more
+                                                details.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <img class="ait-asset round-corners figure"
+                                            src="ASSETS/images/figures/overview3.png" alt="" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -431,617 +424,616 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- End Overview Figure -->
+    </section>
+    <!-- End Overview Figure -->
 
-<br/><br/><br/>
-<hr style="width: 30%; margin: auto"/>
-<br/><br/><br/>
+    <br /><br /><br />
+    <hr style="width: 30%; margin: auto" />
+    <br /><br /><br />
 
-<!-- Start in-the-wild -->
-<section class="section" id="sec-itw">
-    <div class="container is-max-desktop">
-        <div class="columns">
-            <div class="column is-centered is-four-fifths">
+    <!-- Start in-the-wild -->
+    <section class="section" id="sec-itw">
+        <div class="container is-max-desktop">
+            <div class="columns">
+                <div class="column is-centered is-four-fifths">
+                    <div class="content">
+                        <h2 class="title is-3">In-the-Wild Results</h2>
+                        <div class="has-text-justified">
+                            <p>
+                                We demonstrate the generalization capability of our method to in-the-wild mobile
+                                camera captures. With just 3 input views, our method is able to generate highly
+                                consistent and photorealistic free-view renders of a subject. Our method not only
+                                reconstructs coherent geometry, it also learns to interpolate view-dependent
+                                specularities, such as on the hair and skin.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-centered has-text-centered is-four-fifths">
+                    <div class="columns carousel" id="carousel-itw">
+                        <div class="column item-1">
+                            <div class="content">
+                                <h3 class="has-text-centered">Input Views</h3>
+                            </div>
+                            <div class="columns">
+                                <div class="column input-views">
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_240117_003_001_C00.jpg" alt="" />
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_240117_003_001_C01.jpg" alt="" />
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_240117_003_001_C02.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="has-text-centered">Novel View Synthesis</h3>
+                            </div>
+                            <div class="item">
+                                <video poster="" autoplay controls muted loop playsinline height="100%"
+                                    class="itw-video">
+                                    <source class="ait-asset"
+                                        src="ASSETS/videos/inthewild/cafca/multi_240117_003_001_itwseq_v2_down1_bs4096_n3_f25_vdir0.0001_v1_fitting_path_renders_step_50000_color_cropped.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                        <div class="column item-2">
+                            <div class="content">
+                                <h3 class="has-text-centered">Input Views</h3>
+                            </div>
+                            <div class="columns">
+                                <div class="column input-views">
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_240117_000_000_C00.jpg" alt="" />
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_240117_000_000_C01.jpg" alt="" />
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_240117_000_000_C02.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="has-text-centered">Novel View Synthesis</h3>
+                            </div>
+                            <div class="item">
+                                <video poster="" autoplay controls muted loop playsinline height="100%"
+                                    class="itw-video">
+                                    <source class="ait-asset"
+                                        src="ASSETS/videos/inthewild/cafca/multi_240117_000_000_itwseq_v2_down2_bs4096_n3_f25_vdir0.0001_v0_fitting_path_renders_step_50000_color_cropped.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                        <div class="column item-3">
+                            <div class="content">
+                                <h3 class="has-text-centered">Input Views</h3>
+                            </div>
+                            <div class="columns">
+                                <div class="column input-views">
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_0d624022_003_C00.jpg" alt="" />
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_0d624022_003_C01.jpg" alt="" />
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_0d624022_003_C02.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="has-text-centered">Novel View Synthesis</h3>
+                            </div>
+                            <div class="item">
+                                <video poster="" autoplay controls muted loop playsinline height="100%"
+                                    class="itw-video">
+                                    <source class="ait-asset"
+                                        src="ASSETS/videos/inthewild/cafca/multi_0d624022_003_itwseq_v2_down2_bs4096_n3_f25_vdir0.0001_v0_fitting_path_renders_step_50000_color_cropped.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                        <div class="column item-4">
+                            <div class="content">
+                                <h3 class="has-text-centered">Input Views</h3>
+                            </div>
+                            <div class="columns">
+                                <div class="column input-views">
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_240116_001_001_C00.jpg" alt="" />
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_240116_001_001_C01.jpg" alt="" />
+                                    <img class="ait-asset three-input-img"
+                                        src="ASSETS/images/inthewild/small_gt_240116_001_001_C02.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="has-text-centered">Novel View Synthesis</h3>
+                            </div>
+                            <div class="content">
+                                <video poster="" autoplay controls muted loop playsinline height="100%" preload="auto"
+                                    class="itw-video">
+                                    <source class="ait-asset"
+                                        src="ASSETS/videos/inthewild/cafca/multi_240116_001_001_itwseq_v2_down2_bs4096_n3_f25_vdir0.0001_v1_fitting_path_renders_step_50000_color_cropped.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End in-the-wild -->
+
+    <br /><br /><br />
+    <hr style="width: 30%; margin: auto" />
+    <br /><br /><br />
+
+    <!-- Start One-shot -->
+    <section class="section" id="sec-oneshot">
+        <div class="container is-max-desktop">
+            <div class="column is-centered">
                 <div class="content">
-                    <h2 class="title is-3">In-the-Wild Results</h2>
-                    <div class="has-text-justified">
+                    <h2 class="title is-3">One-shot Synthesis In-the-wild</h2>
+                    <div class="content has-text-justified">
                         <p>
-                            We demonstrate the generalization capability of our method to in-the-wild mobile
-                            camera captures. With just 3 input views, our method is able to generate highly
-                            consistent and photorealistic free-view renders of a subject. Our method not only
-                            reconstructs coherent geometry, it also learns to interpolate view-dependent
-                            specularities, such as on the hair and skin.
+                            Synthesis from single view naturally suffers from bas-relief ambiguity making it
+                            much more challenging, but our prior model enables plausible results. We show smartphone
+                            images,
+                            selfies,
+                            an Internet image from the <a target="_blank"
+                                href="https://3d-avatar-diffusion.microsoft.com/">Rodin
+                                website</a>,
+                            and stylized inputs from <a href="https://research.nvidia.com/labs/nxp/lp3d/"
+                                target="_blank">LP3D</a>
+                            (Trevithick et al., 2023). Note that our prior model has never seen any stylization
+                            or strong face paint.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="columns">
-            <div class="column is-centered has-text-centered is-four-fifths">
-                <div class="columns carousel" id="carousel-itw">
-                    <div class="column item-1">
-                        <div class="content">
-                            <h3 class="has-text-centered">Input Views</h3>
-                        </div>
-                        <div class="columns">
-                            <div class="column input-views">
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_240117_003_001_C00.jpg" alt=""/>
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_240117_003_001_C01.jpg" alt=""/>
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_240117_003_001_C02.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <h3 class="has-text-centered">Novel View Synthesis</h3>
-                        </div>
-                        <div class="item">
-                            <video poster="" autoplay controls muted loop playsinline height="100%"
-                                   class="itw-video">
-                                <source class="ait-asset"
-                                        src="ASSETS/videos/inthewild/cafca/multi_240117_003_001_itwseq_v2_down1_bs4096_n3_f25_vdir0.0001_v1_fitting_path_renders_step_50000_color_cropped.mp4"
-                                        type="video/mp4"/>
-                            </video>
+    </section>
+    <div class="column is-centered has-text-centered">
+        <div class="container">
+            <div class="columns carousel" id="carousel-one">
+                <div class="column item-1">
+                    <div class="content">
+                        <h3 class="has-text-centered">Smartphone Image</h3>
+                    </div>
+                    <div class="columns">
+                        <div class="column input-views">
+                            <img class="ait-asset three-input-img"
+                                src="ASSETS/images/single_image/small_240122_000_C00_lr.jpg" alt="" />
                         </div>
                     </div>
-                    <div class="column item-2">
-                        <div class="content">
-                            <h3 class="has-text-centered">Input Views</h3>
-                        </div>
-                        <div class="columns">
-                            <div class="column input-views">
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_240117_000_000_C00.jpg" alt=""/>
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_240117_000_000_C01.jpg" alt=""/>
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_240117_000_000_C02.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <h3 class="has-text-centered">Novel View Synthesis</h3>
-                        </div>
-                        <div class="item">
-                            <video poster="" autoplay controls muted loop playsinline height="100%"
-                                   class="itw-video">
-                                <source class="ait-asset"
-                                        src="ASSETS/videos/inthewild/cafca/multi_240117_000_000_itwseq_v2_down2_bs4096_n3_f25_vdir0.0001_v0_fitting_path_renders_step_50000_color_cropped.mp4"
-                                        type="video/mp4"/>
-                            </video>
-                        </div>
+                    <div class="content">
+                        <h3 class="has-text-centered">Novel View Synthesis</h3>
                     </div>
-                    <div class="column item-3">
-                        <div class="content">
-                            <h3 class="has-text-centered">Input Views</h3>
-                        </div>
-                        <div class="columns">
-                            <div class="column input-views">
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_0d624022_003_C00.jpg" alt=""/>
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_0d624022_003_C01.jpg" alt=""/>
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_0d624022_003_C02.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <h3 class="has-text-centered">Novel View Synthesis</h3>
-                        </div>
-                        <div class="item">
-                            <video poster="" autoplay controls muted loop playsinline height="100%"
-                                   class="itw-video">
-                                <source class="ait-asset"
-                                        src="ASSETS/videos/inthewild/cafca/multi_0d624022_003_itwseq_v2_down2_bs4096_n3_f25_vdir0.0001_v0_fitting_path_renders_step_50000_color_cropped.mp4"
-                                        type="video/mp4"/>
-                            </video>
-                        </div>
-                    </div>
-                    <div class="column item-4">
-                        <div class="content">
-                            <h3 class="has-text-centered">Input Views</h3>
-                        </div>
-                        <div class="columns">
-                            <div class="column input-views">
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_240116_001_001_C00.jpg" alt=""/>
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_240116_001_001_C01.jpg" alt=""/>
-                                <img class="ait-asset three-input-img"
-                                     src="ASSETS/images/inthewild/small_gt_240116_001_001_C02.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <h3 class="has-text-centered">Novel View Synthesis</h3>
-                        </div>
-                        <div class="content">
-                            <video poster="" autoplay controls muted loop playsinline height="100%" preload="auto"
-                                   class="itw-video">
-                                <source class="ait-asset"
-                                        src="ASSETS/videos/inthewild/cafca/multi_240116_001_001_itwseq_v2_down2_bs4096_n3_f25_vdir0.0001_v1_fitting_path_renders_step_50000_color_cropped.mp4"
-                                        type="video/mp4"/>
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End in-the-wild -->
-
-<br/><br/><br/>
-<hr style="width: 30%; margin: auto"/>
-<br/><br/><br/>
-
-<!-- Start One-shot -->
-<section class="section" id="sec-oneshot">
-    <div class="container is-max-desktop">
-        <div class="column is-centered">
-            <div class="content">
-                <h2 class="title is-3">One-shot Synthesis In-the-wild</h2>
-                <div class="content has-text-justified">
-                    <p>
-                        Synthesis from single view naturally suffers from bas-relief ambiguity making it
-                        much more challenging, but our prior model enables plausible results. We show smartphone
-                        images,
-                        selfies,
-                        an Internet image from the <a target="_blank"
-                                                      href="https://3d-avatar-diffusion.microsoft.com/">Rodin
-                        website</a>,
-                        and stylized inputs from <a href="https://research.nvidia.com/labs/nxp/lp3d/"
-                                                    target="_blank">LP3D</a>
-                        (Trevithick et al., 2023). Note that our prior model has never seen any stylization
-                        or strong face paint.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="column is-centered has-text-centered">
-    <div class="container">
-        <div class="columns carousel" id="carousel-one">
-            <div class="column item-1">
-                <div class="content">
-                    <h3 class="has-text-centered">Smartphone Image</h3>
-                </div>
-                <div class="columns">
-                    <div class="column input-views">
-                        <img class="ait-asset three-input-img"
-                             src="ASSETS/images/single_image/small_240122_000_C00_lr.jpg" alt=""/>
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="has-text-centered">Novel View Synthesis</h3>
-                </div>
-                <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset"
+                    <div class="item">
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset"
                                 src="ASSETS/videos/single_image/cafca/multi_240122_000_000_itwseq_v2_dist1_down4_bs4096_n3_f25_vdir0.0001_v1_fitting_path_renders_step_50000_color_cropped_512x512.mp4"
-                                type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-            <div class="column item-2">
-                <div class="content">
-                    <h3 class="has-text-centered">Selfie</h3>
-                </div>
-                <div class="columns">
-                    <div class="column input-views">
-                        <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_6f6687cd.jpg"
-                             alt=""/>
+                                type="video/mp4" />
+                        </video>
                     </div>
                 </div>
-                <div class="content">
-                    <h3 class="has-text-centered">Novel View Synthesis</h3>
-                </div>
-                <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/single_image/cafca/6f6687cd_512x512.mp4"
-                                type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-            <div class="column item-3">
-                <div class="content">
-                    <h3 class="has-text-centered">Internet Image</h3>
-                </div>
-                <div class="columns">
-                    <div class="column input-views">
-                        <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_rodin_C00.jpg"
-                             alt=""/>
+                <div class="column item-2">
+                    <div class="content">
+                        <h3 class="has-text-centered">Selfie</h3>
                     </div>
-                </div>
-                <div class="content">
-                    <h3 class="has-text-centered">Novel View Synthesis</h3>
-                </div>
-                <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/single_image/cafca/00000_color_cropped.mp4"
-                                type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-            <div class="column item-4">
-                <div class="content">
-                    <h3 class="has-text-centered">Stylized Input</h3>
-                </div>
-                <div class="columns">
-                    <div class="column input-views">
-                        <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_56.jpg"
-                             alt=""/>
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="has-text-centered">Novel View Synthesis</h3>
-                </div>
-                <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/single_image/cafca/20240201_095156.mp4" ß
-                                type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-            <div class="column item-5">
-                <div class="content">
-                    <h3 class="has-text-centered">Stylized Input</h3>
-                </div>
-                <div class="columns">
-                    <div class="column input-views">
-                        <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_19.jpg"
-                             alt=""/>
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="has-text-centered">Novel View Synthesis</h3>
-                </div>
-                <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/single_image/cafca/20240201_095719.mp4"
-                                type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-            <div class="column item-6">
-                <div class="content">
-                    <h3 class="has-text-centered">Stylized Input</h3>
-                </div>
-                <div class="columns">
-                    <div class="column input-views">
-                        <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_44.jpg"
-                             alt=""/>
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="has-text-centered">Novel View Synthesis</h3>
-                </div>
-                <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/single_image/cafca/20240201_095644.mp4"
-                                type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End One-shot -->
-
-<br/><br/><br/>
-<hr style="width: 30%; margin: auto"/>
-<br/><br/><br/>
-
-<!-- Start Prior Model -->
-<section class="section" id="sec-prior">
-    <div class="container is-max-desktop">
-        <div class="column is-centered">
-            <div class="content">
-                <h2 class="title is-3">Synthetic Prior Model</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="content has-text-justified">
-                            <p>
-                                We train a synthetic prior model to capture the distribution of human heads with
-                                arbitrary facial expressions. The prior model is a conditional NeRF with three
-                                additional inputs modeling the identity <b><i>&beta;</i></b>, the expression
-                                <b><i>&psi;</i></b>, out-of-3DMM properties <b>w</b> like
-                                hair, clothing, and appearance.
-                            </p>
-                            <p>
-                                We show interpolations for each of the latent spaces.
-                            </p>
+                    <div class="columns">
+                        <div class="column input-views">
+                            <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_6f6687cd.jpg"
+                                alt="" />
                         </div>
                     </div>
-                    <div class="column">
-                        <img class="ait-asset round-corners" src="ASSETS/images/figures/prior_model.png" alt=""/>
+                    <div class="content">
+                        <h3 class="has-text-centered">Novel View Synthesis</h3>
+                    </div>
+                    <div class="item">
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/single_image/cafca/6f6687cd_512x512.mp4"
+                                type="video/mp4" />
+                        </video>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="column is-centered has-text-centered">
-    <div class="container">
-        <div class="columns carousel" id="carousel-prior">
-            <div class="column item-1">
-                <div class="content">
-                    <h3 class="has-text-centered">Identity Interpolation <i>&beta;</i></h3>
-                </div>
-                <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_id_static.mp4"
-                                type="video/mp4"/>
-                    </video>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_id_orbit.mp4"
-                                type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-            <div class="column item-2">
-                <div class="content">
-                    <h3 class="has-text-centered">Expression Interpolation <i>&psi;</i></h3>
-                </div>
-                <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_exp_static.mp4"
-                                type="video/mp4"/>
-                    </video>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_exp_orbit.mp4"
-                                type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-            <div class="column item-3">
-                <div class="content">
-                    <h3 class="has-text-centered">Out-of-model Interpolation <b>w</b></h3>
-                </div>
-                <div class="item">
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_w_static.mp4"
-                                type="video/mp4"/>
-                    </video>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                        <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_w_orbit.mp4"
-                                type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Prior Model -->
-
-<br/><br/><br/>
-<hr style="width: 30%; margin: auto"/>
-<br/><br/><br/>
-
-<!-- Start Limitations -->
-<section class="section" id="sec-limitations">
-    <div class="container is-max-desktop">
-        <div class="column is-centered">
-            <div class="content">
-                <h3 class="title is-3">Limitations</h3>
-                <div class="content has-text-justified">
-                    <p>
-                        Our synthetic prior is trained on glasses, however only 20% of the synthetic
-                        identities wear glasses. In some cases, the fine-tuned results incorrectly paint the
-                        frame of glasses onto the skin (see the example on the first row). This happens when
-                        only a single input view shows the frame from a side angle. Furthermore, our method
-                        tends to produce bad results when the shoulders are not unobserved in the input
-                        (bottom left), and it fails for heavily out-of-distribution faces (bottom right).
-                        Note how the prior tries to reconstruct Gollum by adding glasses. Please see the
-                        paper for a discussion of limitations.
-                    </p>
-                    <p><i>The bottom left image is from the <a href="https://3d-avatar-diffusion.microsoft.com/"
-                                                               target="_blank"> Rodin website</a>.
-                        The Gollum image (bottom right) is from The Lord of the Rings © New Line Cinema / Warner
-                        Bros.</i></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="column is-centered has-text-centered">
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <div class="content">
-                    <h3 class="has-text-centered">Inputs</h3>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <img class="ait-asset" src="ASSETS/images/inthewild/gt_limitation_00.jpg"/>
-                        <img class="ait-asset" src="ASSETS/images/inthewild/gt_limitation_01.jpg"/>
-                        <img class="ait-asset" src="ASSETS/images/inthewild/gt_limitation_02.jpg"/>
+                <div class="column item-3">
+                    <div class="content">
+                        <h3 class="has-text-centered">Internet Image</h3>
                     </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                    <h3 class="has-text-centered">Result</h3>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="item">
-                            <video poster="" autoplay controls muted loop playsinline height="100%">
-                                <source class="ait-asset" src="ASSETS/videos/limitations/small_00_rgb.mp4"
-                                        type="video/mp4"/>
-                            </video>
+                    <div class="columns">
+                        <div class="column input-views">
+                            <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_rodin_C00.jpg"
+                                alt="" />
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="item">
-                            <video poster="" autoplay controls muted loop playsinline height="100%">
-                                <source class="ait-asset" src="ASSETS/videos/limitations/small_00_normals.mp4"
-                                        type="video/mp4"/>
-                            </video>
+                    <div class="content">
+                        <h3 class="has-text-centered">Novel View Synthesis</h3>
+                    </div>
+                    <div class="item">
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/single_image/cafca/00000_color_cropped.mp4"
+                                type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+                <div class="column item-4">
+                    <div class="content">
+                        <h3 class="has-text-centered">Stylized Input</h3>
+                    </div>
+                    <div class="columns">
+                        <div class="column input-views">
+                            <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_56.jpg"
+                                alt="" />
                         </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="has-text-centered">Novel View Synthesis</h3>
+                    </div>
+                    <div class="item">
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/single_image/cafca/20240201_095156.mp4" ß
+                                type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+                <div class="column item-5">
+                    <div class="content">
+                        <h3 class="has-text-centered">Stylized Input</h3>
+                    </div>
+                    <div class="columns">
+                        <div class="column input-views">
+                            <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_19.jpg"
+                                alt="" />
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="has-text-centered">Novel View Synthesis</h3>
+                    </div>
+                    <div class="item">
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/single_image/cafca/20240201_095719.mp4"
+                                type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+                <div class="column item-6">
+                    <div class="content">
+                        <h3 class="has-text-centered">Stylized Input</h3>
+                    </div>
+                    <div class="columns">
+                        <div class="column input-views">
+                            <img class="ait-asset three-input-img" src="ASSETS/images/single_image/small_44.jpg"
+                                alt="" />
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="has-text-centered">Novel View Synthesis</h3>
+                    </div>
+                    <div class="item">
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/single_image/cafca/20240201_095644.mp4"
+                                type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="content">
-                    <h3 class="has-text-centered">Inconsistent Frame for Glasses</h3>
-                </div>
-                <div>
-                    <img class="ait-asset" src="ASSETS/images/limitations/00.jpg"/>
-                </div>
-            </div>
         </div>
-        <div class="columns">
-            <div class="column">
+    </div>
+    <!-- End One-shot -->
+
+    <br /><br /><br />
+    <hr style="width: 30%; margin: auto" />
+    <br /><br /><br />
+
+    <!-- Start Prior Model -->
+    <section class="section" id="sec-prior">
+        <div class="container is-max-desktop">
+            <div class="column is-centered">
                 <div class="content">
-                    <h3 class="has-text-centered">Input</h3>
-                </div>
-                <div>
+                    <h2 class="title is-3">Synthetic Prior Model</h2>
                     <div class="columns">
                         <div class="column">
-                            <img class="ait-asset" src="ASSETS/images/single_image/rodin_C00.jpg"/>
+                            <div class="content has-text-justified">
+                                <p>
+                                    We train a synthetic prior model to capture the distribution of human heads with
+                                    arbitrary facial expressions. The prior model is a conditional NeRF with three
+                                    additional inputs modeling the identity <b><i>&beta;</i></b>, the expression
+                                    <b><i>&psi;</i></b>, out-of-3DMM properties <b>w</b> like
+                                    hair, clothing, and appearance.
+                                </p>
+                                <p>
+                                    We show interpolations for each of the latent spaces.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img class="ait-asset round-corners" src="ASSETS/images/figures/prior_model.png" alt="" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="content">
-                    <h3 class="has-text-centered">Result</h3>
+        </div>
+    </section>
+    <div class="column is-centered has-text-centered">
+        <div class="container">
+            <div class="columns carousel" id="carousel-prior">
+                <div class="column item-1">
+                    <div class="content">
+                        <h3 class="has-text-centered">Identity Interpolation <i>&beta;</i></h3>
+                    </div>
+                    <div class="item">
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_id_static.mp4"
+                                type="video/mp4" />
+                        </video>
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_id_orbit.mp4"
+                                type="video/mp4" />
+                        </video>
+                    </div>
                 </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="item">
-                            <video poster="" autoplay controls muted loop playsinline height="100%">
-                                <source class="ait-asset" src="ASSETS/videos/limitations/small_rodin.mp4"
-                                        type="video/mp4"/>
-                            </video>
-                        </div>
+                <div class="column item-2">
+                    <div class="content">
+                        <h3 class="has-text-centered">Expression Interpolation <i>&psi;</i></h3>
+                    </div>
+                    <div class="item">
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_exp_static.mp4"
+                                type="video/mp4" />
+                        </video>
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_exp_orbit.mp4"
+                                type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+                <div class="column item-3">
+                    <div class="content">
+                        <h3 class="has-text-centered">Out-of-model Interpolation <b>w</b></h3>
+                    </div>
+                    <div class="item">
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_w_static.mp4"
+                                type="video/mp4" />
+                        </video>
+                        <video poster="" autoplay controls muted loop playsinline height="100%">
+                            <source class="ait-asset" src="ASSETS/videos/prior/00_interpol_w_orbit.mp4"
+                                type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>
-            <div class="column">
+        </div>
+    </div>
+    <!-- End Prior Model -->
+
+    <br /><br /><br />
+    <hr style="width: 30%; margin: auto" />
+    <br /><br /><br />
+
+    <!-- Start Limitations -->
+    <section class="section" id="sec-limitations">
+        <div class="container is-max-desktop">
+            <div class="column is-centered">
                 <div class="content">
-                    <h3 class="has-text-centered">Input</h3>
+                    <h3 class="title is-3">Limitations</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            Our synthetic prior is trained on glasses, however only 20% of the synthetic
+                            identities wear glasses. In some cases, the fine-tuned results incorrectly paint the
+                            frame of glasses onto the skin (see the example on the first row). This happens when
+                            only a single input view shows the frame from a side angle. Furthermore, our method
+                            tends to produce bad results when the shoulders are not unobserved in the input
+                            (bottom left), and it fails for heavily out-of-distribution faces (bottom right).
+                            Note how the prior tries to reconstruct Gollum by adding glasses. Please see the
+                            paper for a discussion of limitations.
+                        </p>
+                        <p><i>The bottom left image is from the <a href="https://3d-avatar-diffusion.microsoft.com/"
+                                    target="_blank"> Rodin website</a>.
+                                The Gollum image (bottom right) is from The Lord of the Rings © New Line Cinema / Warner
+                                Bros.</i></p>
+                    </div>
                 </div>
-                <div>
+            </div>
+        </div>
+    </section>
+    <div class="column is-centered has-text-centered">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="content">
+                        <h3 class="has-text-centered">Inputs</h3>
+                    </div>
                     <div class="columns">
                         <div class="column">
-                            <img class="ait-asset" src="ASSETS/images/limitations/gollum.jpg"/>
+                            <img class="ait-asset" src="ASSETS/images/inthewild/gt_limitation_00.jpg" />
+                            <img class="ait-asset" src="ASSETS/images/inthewild/gt_limitation_01.jpg" />
+                            <img class="ait-asset" src="ASSETS/images/inthewild/gt_limitation_02.jpg" />
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                    <h3 class="has-text-centered">Result</h3>
+                <div class="column">
+                    <div class="content">
+                        <h3 class="has-text-centered">Result</h3>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="item">
+                                <video poster="" autoplay controls muted loop playsinline height="100%">
+                                    <source class="ait-asset" src="ASSETS/videos/limitations/small_00_rgb.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="item">
+                                <video poster="" autoplay controls muted loop playsinline height="100%">
+                                    <source class="ait-asset" src="ASSETS/videos/limitations/small_00_normals.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop playsinline height="100%">
-                                <source class="ait-asset" src="ASSETS/videos/limitations/small_gollum_color.mp4"
-                                        type="video/mp4"/>
-                            </video>
+                <div class="column">
+                    <div class="content">
+                        <h3 class="has-text-centered">Inconsistent Frame for Glasses</h3>
+                    </div>
+                    <div>
+                        <img class="ait-asset" src="ASSETS/images/limitations/00.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="content">
+                        <h3 class="has-text-centered">Input</h3>
+                    </div>
+                    <div>
+                        <div class="columns">
+                            <div class="column">
+                                <img class="ait-asset" src="ASSETS/images/single_image/rodin_C00.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content">
+                        <h3 class="has-text-centered">Result</h3>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="item">
+                                <video poster="" autoplay controls muted loop playsinline height="100%">
+                                    <source class="ait-asset" src="ASSETS/videos/limitations/small_rodin.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content">
+                        <h3 class="has-text-centered">Input</h3>
+                    </div>
+                    <div>
+                        <div class="columns">
+                            <div class="column">
+                                <img class="ait-asset" src="ASSETS/images/limitations/gollum.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content">
+                        <h3 class="has-text-centered">Result</h3>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="item">
+                                <video poster="" id="" autoplay controls muted loop playsinline height="100%">
+                                    <source class="ait-asset" src="ASSETS/videos/limitations/small_gollum_color.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Limitations -->
+    <!-- End Limitations -->
 
-<br/><br/><br/>
-<hr style="width: 30%; margin: auto"/>
-<br/><br/><br/>
+    <br /><br /><br />
+    <hr style="width: 30%; margin: auto" />
+    <br /><br /><br />
 
-<!-- Start Future Work -->
-<section class="section" id="sec-animation">
-    <div class="container is-max-desktop">
-        <div class="column is-centered">
-            <div class="content">
-                <h3 class="title is-3">Future Work: Animation</h3>
-                <div class="content has-text-justified">
-                    <p>
-                        While our focus is on novel view synthesis of static faces, future work could
-                        leverage similar prior models for facial animation. To demonstrate this, we test our
-                        model by fine-tuning to 12 smartphone images and interpolating random expressions
-                        from the synthetic pre-training set. Fine-tuning to multiple expressions helps
-                        preserve the expression space of the prior model, and enables the rendering of
-                        expressions that are not seen in the input images.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="column is-centered has-text-centered">
-    <div class="container">
-        <div class="columns">
-            <div class="column">
+    <!-- Start Future Work -->
+    <section class="section" id="sec-animation">
+        <div class="container is-max-desktop">
+            <div class="column is-centered">
                 <div class="content">
-                    <h3 class="has-text-centered">Inputs</h3>
-                </div>
-                <div>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/01.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/02.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/03.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/04.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/05.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/06.jpg"/>
-                </div>
-                <div>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/10.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/11.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/12.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/07.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/08.jpg"/>
-                    <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/09.jpg"/>
-                </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                    <h3 class="has-text-centered">Novel Expressions</h3>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="item">
-                            <video poster="" autoplay controls muted loop playsinline height="100%">
-                                <source class="ait-asset" src="ASSETS/videos/animation/00_rgb.mp4"
-                                        type="video/mp4"/>
-                            </video>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="item">
-                            <video poster="" autoplay controls muted loop playsinline height="100%">
-                                <source class="ait-asset" src="ASSETS/videos/animation/00_normals.mp4"
-                                        type="video/mp4"/>
-                            </video>
-                        </div>
+                    <h3 class="title is-3">Future Work: Animation</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            While our focus is on novel view synthesis of static faces, future work could
+                            leverage similar prior models for facial animation. To demonstrate this, we test our
+                            model by fine-tuning to 12 smartphone images and interpolating random expressions
+                            from the synthetic pre-training set. Fine-tuning to multiple expressions helps
+                            preserve the expression space of the prior model, and enables the rendering of
+                            expressions that are not seen in the input images.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <div class="column is-centered has-text-centered">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="content">
+                        <h3 class="has-text-centered">Inputs</h3>
+                    </div>
+                    <div>
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/01.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/02.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/03.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/04.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/05.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/06.jpg" />
+                    </div>
+                    <div>
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/10.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/11.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/12.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/07.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/08.jpg" />
+                        <img class="ait-asset tiny_image" src="ASSETS/images/inthewild/animation/09.jpg" />
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content">
+                        <h3 class="has-text-centered">Novel Expressions</h3>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="item">
+                                <video poster="" autoplay controls muted loop playsinline height="100%">
+                                    <source class="ait-asset" src="ASSETS/videos/animation/00_rgb.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="item">
+                                <video poster="" autoplay controls muted loop playsinline height="100%">
+                                    <source class="ait-asset" src="ASSETS/videos/animation/00_normals.mp4"
+                                        type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<!-- End Future Work -->
+    <!-- End Future Work -->
 
-<!--<br/><br/><br/>-->
-<!--<hr style="width: 30%; margin: auto"/>-->
-<!--<br/><br/><br/>-->
+    <!--<br/><br/><br/>-->
+    <!--<hr style="width: 30%; margin: auto"/>-->
+    <!--<br/><br/><br/>-->
 
-<!-- Start Citation -->
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="column is-centered">
-            <div class="container">
-                <div class="columns">
-                    <div class="column">
-                        If you find this work useful, please consider citing:
-                        <pre class="citation">@incollection{buehler2024cafca,
+    <!-- Start Citation -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="column is-centered">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                            If you find this work useful, please consider citing:
+                            <pre class="citation">@incollection{buehler2024cafca,
     title={Cafca: High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot Captures},
     author={Marcel C. Buehler and Gengyan Li and Erroll Wood and Leonhard Helminger and Xu Chen and Tanmay Shah and Daoye Wang and Stephan Garbin and Sergio Orts-Escolano and Otmar Hilliges and Dmitry Lagun and Jérémy Riviere and Paulo Gotardo and Thabo Beeler and Abhimitra Meka and Kripasindhu Sarkar},
     year={2024},
@@ -1050,85 +1042,85 @@
     url={https://doi.org/10.1145/3680528}
 }
     </pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- End Citation -->
+    </section>
+    <!-- End Citation -->
 
-<footer class="footer">
-    <div class="container">
-        <div class="columns is-centered">
-            <div class="column is-8">
-                <div class="content">
-                    <p>
-                        This website is licensed under a
-                        <a rel="license" href="htt=
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is licensed under a
+                            <a rel="license" href="htt=
 p://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-                    </p>
-                    <p>
-                        We thank <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> for
-                        providing the website template.
-                    </p>
+                        </p>
+                        <p>
+                            We thank <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> for
+                            providing the website template.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
 
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-            el.addEventListener('click', () => {
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
 
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
 
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
 
+                });
             });
+
         });
 
-    });
+        bulmaCarousel.attach('#carousel-overview', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+        });
 
-    bulmaCarousel.attach('#carousel-overview', {
-        slidesToScroll: 1,
-        slidesToShow: 1,
-        loop: true,
-    });
+        bulmaCarousel.attach('#carousel-itw', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            infinite: true,
+        });
 
-    bulmaCarousel.attach('#carousel-itw', {
-        slidesToScroll: 1,
-        slidesToShow: 1,
-        loop: true,
-        infinite: true,
-    });
+        bulmaCarousel.attach('#carousel-one', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            infinite: true,
+        });
 
-    bulmaCarousel.attach('#carousel-one', {
-        slidesToScroll: 1,
-        slidesToShow: 1,
-        loop: true,
-        infinite: true,
-    });
-
-    bulmaCarousel.attach('#carousel-prior', {
-        slidesToScroll: 1,
-        slidesToShow: 1,
-        loop: true,
-        infinite: true,
-    });
-    var accordions = bulmaAccordion.attach(); // accordions now contains an array of all Accordion instances
-</script>
+        bulmaCarousel.attach('#carousel-prior', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            infinite: true,
+        });
+        var accordions = bulmaAccordion.attach(); // accordions now contains an array of all Accordion instances
+    </script>
 </body>
 
 </html>
