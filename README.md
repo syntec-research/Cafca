@@ -1,6 +1,6 @@
 # Cafca
 
-This is the repository that contains source code for the [Cafca website](https://syntec-research.github.io/Cafca/). Please refer to [Dataset.md](Dataset.md) for the Cafca dataset.
+This is the repository that contains source code for the [Cafca website](https://syntec-research.github.io/Cafca/) and [Cafca dataset page](https://syntec-research.github.io/Cafca/cafca_dataset.html). Please refer to [Dataset.md](Dataset.md) for downloading the dataset.
 
 
 # Website License
