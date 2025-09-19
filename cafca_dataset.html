@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description"
+        content="Cafca: High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot Captures" />
+    <meta name="keywords" content="Cafca" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        Cafca Synthetic Face Dataset
+    </title>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="./static/css/academicons.min.css" />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="stylesheet" href="./static/css/dataset_visualization.css" />
+    <link rel="icon" href="./static/images/favicon-32x32.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script type="text/javascript" src="/node_modules/bulma-accordion/dist/js/bulma-accordion.min.js"></script>
+    <script src="./static/js/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/dataset_visualization.js"></script>
+</head>
+
+<style>
+    .rotate_image {
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        transform: rotate(270deg);
+        margin: 100px 0 50px 0;
+    }
+
+    .rotate_image90 {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin: 100px 0 50px 0;
+    }
+
+    .rotate-text {
+        transform: rotate(270deg);
+    }
+
+    .tiny_image {
+        width: 12%;
+    }
+</style>
+
+<body>
+    <nav class="navbar is-fixed-top is-link" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#sec-top"> Home </a>
+                <a class="navbar-item" href="#sec-info"> Facts </a>
+                <a class="navbar-item" href="#sec-demo"> Samples </a>
+                <a class="navbar-item" href="#sec-related"> Related Datasets </a>
+                <a class="navbar-item" href="#sec-ack"> Acknowledgements</a>
+                <a class="navbar-item" href="#sec-cite"> Citation</a>
+                <a class="navbar-item" href="https://github.com/syntec-research/Cafca/blob/main/Dataset.md"
+                    target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Download (GitHub)</a>
+                <a class="navbar-item" href="index.html"
+                    target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Project Page</a>
+                <a class="navbar-item" href="https://colab.research.google.com/github/syntec-research/Cafca/blob/main/Cafca_Synthetic_Dataset.ipynb"
+                    target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Quickstart Colab</a>
+            </div>
+            <div class="navbar-end"></div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">-</div>
+    </section>
+
+
+    <section class="hero" id="sec-top">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">
+                            Cafca Synthetic Face Dataset
+                        </h1>
+
+                        <div class="content has-text-centered">
+                            <p>A large-scale, diverse multiview face dataset for avatar reconstruction and animation, face parsing, synthetic-to-real transfer learning, animation, relighting, camera estimation, and more.</p>
+                            <p><i>Please use the links in the navigation bar to quickly jump to sections.</i></p>
+                        </div>
+                        <!-- <div>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"><a href="https://ait.ethz.ch/people/buehler"
+                                        target="_blank">Marcel C. Bühler</a><sup>1,2</sup>,</span>
+                                <span class="author-block"><a href="https://ait.ethz.ch/people/lig"
+                                        target="_blank">Gengyan Li</a><sup>1,2</sup>,</span>
+                                <span class="author-block"><a href="https://errollw.com/" target="_blank">Erroll
+                                        Wood</a><sup>2</sup>,</span>
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=mTTsIr4AAAAJ&amp;hl=en"
+                                        target="_blank">Leonhard Helminger</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="https://xuchen-ethz.github.io/" target="_blank">Xu
+                                        Chen</a><sup>2</sup>,</span>
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=USYxdJ4AAAAJ&amp;hl=en&amp;oi=ao"
+                                        target="_blank">Tanmay Shah</a><sup>2</sup>,</span>
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=pe5XLTEAAAAJ&amp;hl=en"
+                                        target="_blank">Daoye Wang</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="http://stephangarbin.com/" target="_blank">Stephan
+                                        Garbin</a><sup>2</sup>,</span>
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=dznX1DMAAAAJ&amp;hl=es"
+                                        target="_blank">Sergio Orts-Escolano</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="https://ait.ethz.ch/people/hilliges"
+                                        target="_blank">Otmar Hilliges</a><sup>1</sup>,</span>
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=sY8lt7AAAAAJ&amp;hl=en"
+                                        target="_blank">Dmitry Lagun</a><sup>2</sup>,</span>
+                                <span class="author-block"><a
+                                        href="https://scholar.google.com/citations?user=FaLQzRAAAAAJ"
+                                        target="_blank">Jérémy Riviere</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="https://www.paulogotardo.com/" target="_blank">Paulo
+                                        Gotardo</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="https://thabobeeler.com/" target="_blank">Thabo
+                                        Beeler</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="https://www.meka.page/" target="_blank">Abhimitra
+                                        Meka</a><sup>2</sup>,</span>
+                                <span class="author-block"><a href="https://krips89.github.io/profile_page/"
+                                        target="_blank">Kripasindhu Sarkar</a><sup>2</sup></span>
+                                <div class="is-size-5 publication-authors">
+                                    <span class="author-block"><sup>1</sup><a href="https://ait.ethz.ch/"
+                                            target="_blank" title="AIT Lab at ETH Zurich">ETH Zurich</a>,</span>
+                                    <span class="author-block"><sup>2</sup><a href="https://arvr.google.com/"
+                                            target="_blank" title="Google AR/VR">Google</a></span>
+                                </div>
+                                <div class="is-size-5 publication-authors">
+                                    <span class="author-block">-</span>
+                                </div>
+                                <div class="is-size-5 publication-authors">
+                                    <span class="author-block small-img" style="background-color: #FFDE75;"><a
+                                            href="https://asia.siggraph.org/2024/" target="_blank"
+                                            title="SIGGRAPH Asia 2024 Website"><img
+                                                src="static/sga_logo.png" /></a></span>
+                                </div>
+                            </div>
+                        </div> -->
+                        <br>
+                        <div class="is-size-5 ">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <a href="index.html"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank" title="Project Page">
+                                        <span><i class="fas fa-external-link-alt"></i>&nbsp;Project Page</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://github.com/syntec-research/Cafca/blob/main/Dataset.md"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank" title="Download on GitHub"> 
+                                        <span><i class="fas fa-external-link-alt"></i>&nbsp;Download</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://colab.research.google.com/github/syntec-research/Cafca/blob/main/Cafca_Synthetic_Dataset.ipynb"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank" title="Get Started Colab">
+                                        <span><i class="fas fa-external-link-alt"></i>&nbsp;Quickstart Colab</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section class="section" id="sec-video">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-five-fifths">
+                    <video class="ait-asset" src="ASSETS/videos/dataset_video_short.mp4" poster="" controls muted loop
+                        playsinline autoplay height="100%">
+                        <source class="ait-asset" src="ASSETS/videos/dataset_video_short.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info. -->
+    <section class="section" id="sec-info">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-five-fifths">
+                    <h2 class="title is-3">Dataset Facts</h2>
+                    <div class="content has-text-justified">
+                        <ul>
+                            <li>1,755 Mio. images</li>
+                            <li>1,500 diverse identities x 13 expressions x 3 environments x 30 views</li>
+                            <li>Resolution 512x512</li>
+                            <li>Annotations for 14 semantic regions</li>
+                            <li>Perspective OpenCV cameras</li>
+                            <li>Pseudo-GT keypoints and <a href="https://flame.is.tue.mpg.de/" target="_blank" title="FLAME face model">FLAME</a> 2023 annotations & meshes (fitted with <a href="https://github.com/ShenhanQian/VHAP" target="_blank" title="VHAP GitHub">VHAP</a>)</li>
+                            <li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 License" target="_blank">CC BY-NC-SA 4.0</a> License</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ Info. -->
+
+    <!-- Dataset Samples. -->
+    <section class="section" id="sec-demo">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-five-fifths">
+                    <h2 class="title is-3">Dataset Samples</h2>
+                    <div class="content has-text-justified">
+                        <div class="container">
+                            <div class="columns is-centered">
+                                <div class="column is-one-fifths">
+                                    <div class="panel">
+                                        <div class="content select is-rounded is-fullwidth">
+                                            <label for="identity-select">Identity</label>
+                                            <select class=".select.is-small" id="identity-select">
+                                                <!-- JS will fill options 00000 - 00020 -->
+                                            </select>
+                                        </div>
+                                        <div class="content select is-rounded is-fullwidth">
+                                            <label for="environment-select">Environment</label>
+                                            <select id="environment-select">
+                                                <!-- JS will fill options 000 - 002 -->
+                                            </select>
+                                        </div>
+                                        <div class="content select is-rounded is-fullwidth">
+                                            <label for="expression-select">Expression</label>
+                                            <select id="expression-select">
+                                                <!-- JS will fill options 000 - 002 -->
+                                            </select>
+                                        </div>
+                                        <div id="show-image-div" class="content button is-rounded is-fullwidth">
+                                            <button id="show-image">Show Image</button>
+                                        </div>
+                                        <div class="content"></div>
+                                        <div class="content button is-rounded is-fullwidth is-warning">
+                                            <button id="random-select">I'm feeling lucky</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columns is-centered">
+                                <div class="column is-five-fifths">
+                                    <h6 class="title is-5">Image</h6>
+                                    <div class="content panel" id="result-raw">
+                                        <div class="columns is-centered">
+                                            <div class="column is-two-fifths" id="result-raw-rgb">
+                                            </div>
+                                            <div class="column is-two-fifths" id="result-raw-segmentation">
+                                                <canvas id="img-segmentation"></canvas>
+                                            </div>
+                                            <div class="column is-one-fifths" id="result-raw-camera">
+                                                <span id="camera-info"></span>
+                                            </div>
+                                        </div>
+                                    <!-- Image will appear here -->
+                                </div>
+                                <div class="column is-five-fifths">
+                                    <h6 class="title is-5">VHAP Fitting Result</h6>
+                                    <div class="content panel" id="result-vhap">
+                                    <!-- Image will appear here -->
+                                </div>
+                            </div>
+                        </div>                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ Dataset Samples. -->
+
+    <!-- Related Datasets. -->
+    <section class="section" id="sec-related">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-five-fifths">
+                    <h2 class="title is-3">Related Datasets</h2>
+                    <div class="content has-text-justified">
+                        <p>The following synthetic datasets could also be useful:</p>
+                        <ul>
+                            <li><a href="https://github.com/microsoft/DAViD" title="DAViD dataset" target="_blank">DAViD (ICCV 2025)</a>: a synthetic dataset with 100K images for each of these body regions: face, upper-body and full-body.</li>
+                            <li><a href="https://bedlam.is.tue.mpg.de/" title="DAViD dataset" target="_blank">BEDLAM (CVPR 2023)</a>: a synthetic dataset with 10K image full-body sequences.</li>
+                            <li><a href="https://dataset.ait.ethz.ch/downloads/imaOsdfvRe/" title="IMAvatar dataset" target="_blank">IMAvatar (CVPR 2022 oral)</a>: a synthetic face dataset with 10 identities.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ Related Datasets. -->
+     <!-- Acknowledgements. -->
+     <section class="section" id="sec-ack">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-five-fifths">
+                    <h2 class="title is-3">Acknowledgements</h2>
+                    <div class="content has-text-justified">
+                        <p>We thank <a href="https://shenhanqian.github.io/" title="Shenhan Qian's website" target="_blank">Shenhan Qian</a> for providing the photometric optimization pipeline <a href="https://github.com/ShenhanQian/VHAP" target="_blank" title="VHAP GitHub">VHAP</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ Acknowledgements. -->
+
+    <br /><br /><br />
+    <hr style="width: 30%; margin: auto" />
+    <br /><br /><br />
+
+
+    <!-- Start Citation -->
+    <section class="section" id="sec-cite">
+        <div class="container is-max-desktop">
+            <div class="column is-centered">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                            If you find this dataset useful, please consider citing:
+                            <pre class="citation">@incollection{buehler2024cafca,
+    title={Cafca: High-quality Novel View Synthesis of Expressive Faces from Casual Few-shot Captures},
+    author={Marcel C. Buehler and Gengyan Li and Erroll Wood and Leonhard Helminger and Xu Chen and Tanmay Shah and Daoye Wang and Stephan Garbin and Sergio Orts-Escolano and Otmar Hilliges and Dmitry Lagun and Jérémy Riviere and Paulo Gotardo and Thabo Beeler and Abhimitra Meka and Kripasindhu Sarkar},
+    year={2024},
+    booktitle={ACM SIGGRAPH Asia 2024 Conference Paper},
+    doi={10.1145/3680528.3687580},
+    url={https://doi.org/10.1145/3680528}
+}
+    </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Citation -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is licensed under a
+                            <a rel="license" href="htt=
+p://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                        <p>
+                            We thank <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> for
+                            providing the website template.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

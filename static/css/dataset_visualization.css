@@ -1,0 +1,11 @@
+/* .container { display: flex; gap: 2rem; margin-top: 2rem; } */
+.panel {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+/* button, select { margin: 0.5rem 0; display: block; } */
+
+#show-image-div {
+    display: none;
+}
