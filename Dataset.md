@@ -25,7 +25,7 @@ Download (version 2):
 Cafca is a large-scale, diverse multiview face dataset for avatar reconstruction and animation, face parsing, synthetic-to-real transfer learning, animation, relighting, camera estimation, and more.
 
 The full dataset contains 1,500 synthetic subjects, each of which is rendered in 3 environments with 13 random expressions from 30 views,
-resulting in 1.755 Mio. images. The dataset is split into 15 chunks. Each chunk is about 67 GB and contains 100 identities.
+resulting in 1.755 Mio. images. The dataset is split into 15 chunks. Each chunk is about 83 GB and contains 100 identities.
 
 If you want to get started quickly, you can use the colab or download a subset of the dataset from the links above.
 
