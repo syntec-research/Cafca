@@ -36,7 +36,7 @@ If you want to get started quickly, you can use the colab or download a subset o
 |---------|------------|---------------------------------|-----------------|
 | 1.0   | 2024-09-13 | Initial release                        | Marcel C. Buehler   |
 | 1.1   | 2024-10-22 | Add in-the-wild dataset                | Marcel C. Buehler   |
-| 2.0   | 2025-09-19 | Add FLAME annotations and keypoints    | Marcel C. Buehler   |
+| 2.0   | 2025-09-19 | Add FLAME annotations for first 100 subjects   | Marcel C. Buehler   |
 
 ## Folder Structure
 
