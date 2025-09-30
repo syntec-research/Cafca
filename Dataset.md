@@ -37,6 +37,7 @@ If you want to get started quickly, you can use the colab or download a subset o
 | 1.0   | 2024-09-13 | Initial release                        | Marcel C. Buehler   |
 | 1.1   | 2024-10-22 | Add in-the-wild dataset                | Marcel C. Buehler   |
 | 2.0   | 2025-09-19 | Add FLAME annotations for first 100 subjects   | Marcel C. Buehler   |
+| 2.1   | 2025-09-30 | Add FLAME annotations for all 1,500 subjects   | Marcel C. Buehler   |
 
 ## Folder Structure
 
@@ -80,11 +81,11 @@ The dataset includes pseudo-GT annotations for keypoints and [FLAME](https://fla
 The annotations are stored as `npz` files that combine all expressions for a particular frame and environment. For example, the FLAME parameters for subject `00000` and environment `000` are stored under 
 `00000-00099/00000/flame_2023_000/tracked_flame_params_100.npz`.
 
-2D Keypoints are estimated with [STAR](https://github.com/ShenhanQian/STAR/) and stored as `npz` in the `landmark2d/STAR` subfolder for each frame and camera. For example, the following path stores landmarks for subject `00000`, expression `00001`, environment `000` and camera `C00`: `00000-00099/00000/00001_000/landmark2d/STAR/C00.npz`
+2D Keypoints are estimated with [STAR](https://github.com/ShenhanQian/STAR/) and stored as `npz` in the `landmark2d/STAR` subfolder for each frame and camera. For example, the following path stores landmarks for subject `00000`, expression `00001`, environment `000`, and camera `C00`: `00000-00099/00000/00001_000/landmark2d/STAR/C00.npz`
 
 ## Contact
 
-Please let us know how we improve the documentation and help you get started.
+Please let us know how we can improve the documentation and help you get started.
 
 ## Citation
 If you find this dataset useful, please consider citing:
