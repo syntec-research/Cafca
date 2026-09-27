@@ -19,6 +19,7 @@ Download (version 2):
 [Project Page](https://syntec-research.github.io/Cafca/)
 | [Dataset Page](https://syntec-research.github.io/Cafca/cafca_dataset.html)
 | [Colab Quickstart](https://colab.research.google.com/github/syntec-research/Cafca/blob/main/Cafca_Synthetic_Dataset.ipynb)
+| [Hugging Face](https://huggingface.co/datasets/mcbuehler/cafca-dataset)
 
 [![](https://files.ait.ethz.ch/projects/cafca/web/static/images/dataset_teaser.jpg)](https://files.ait.ethz.ch/projects/cafca/web/static/videos/dataset_video_short.mp4)
 
@@ -38,6 +39,7 @@ If you want to get started quickly, you can use the colab or download a subset o
 | 1.1   | 2024-10-22 | Add in-the-wild dataset                | Marcel C. Buehler   |
 | 2.0   | 2025-09-19 | Add FLAME annotations for first 100 subjects   | Marcel C. Buehler   |
 | 2.1   | 2025-09-30 | Add FLAME annotations for all 1,500 subjects   | Marcel C. Buehler   |
+| 2.1   | 2026-09-26 | Release sample dataset on Hugging Face   | Marcel C. Buehler   |
 
 ## Folder Structure
 
